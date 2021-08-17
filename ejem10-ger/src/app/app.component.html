@@ -1,0 +1,7 @@
+<h1>Google Books Search!</h1>
+<p>Ejem10: usando httpClient desde el componente </p>
+<input type="text" #inputText><button (click)="searchBook(inputText.value);">Search</button>
+
+<ul>
+<li *ngFor="let tittle of titles" style="margin-top: 10px;">{{tittle}}</li>
+</ul>

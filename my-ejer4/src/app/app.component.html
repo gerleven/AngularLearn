@@ -1,0 +1,10 @@
+<h1>A ChackList - Ejercicio 4</h1>
+<p>usar API rest para que los item no se guarden en memoria si no en el backend</p>
+<input type="text" #inputItem>
+    <button (click)="agregarItem(inputItem.value); inputItem.value=''; inputItem.focus();">Add</button>
+
+    <p *ngIf="listaItems.length==0">Sin items por ahora...</p>
+
+<div *ngFor="let itemPadre of listaItems">
+<app-item  [itemHijo]="itemPadre" (emitterDelete)="eliminarItem($event)"  (emitterCheck)="checkItem($event)"></app-item>
+</div>

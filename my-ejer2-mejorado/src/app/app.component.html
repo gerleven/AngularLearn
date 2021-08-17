@@ -1,0 +1,17 @@
+<style>
+    .noTachado{
+        color: black;
+        font-weight: bold;
+    }
+</style>
+<h1>A ChackList</h1>
+<input type="text" #inputItem><button (click)="agregarItem(inputItem.value); inputItem.value=''; inputItem.focus();">Add</button>
+<p *ngIf="listaItems.length==0">Sin items por ahora...</p>
+
+<div class="itemContenedor" *ngFor="let item of listaItems">
+    <span class="itemCentrado">
+        <input #cb type="checkbox" [(ngModel)]="item.terminado" (click)="test(item);"/><!--Si no le pones el [(ngModel)]="algo" (porque total vas a usar el cb.checked) se rompe todo, asi que agregalo indistintamente si despues vas a usar el cb.cjecked o el intem.terminado como valor booleano para saber si esta checked o no-->
+        <span [class.tachado]="item.terminado">{{item.name}}</span> <!--Aca la clase tachado se activa o no en funcion de si el CB esta checked o no-->
+        <button (click)="eliminarItem(listaItems.indexOf(item));">Delete</button>
+    </span>
+</div>

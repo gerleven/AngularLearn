@@ -1,0 +1,29 @@
+<style>
+    .tachado{
+        color: gray;
+        font-weight: normal;
+        margin-left: 10px;
+        margin-right: 10px;
+        
+    }
+    .noTachado{
+        color: black;
+        font-weight: bold;
+        margin-left: 10px;
+        margin-right: 10px;
+        
+    }
+</style>
+<h1>A ChackList</h1>
+<input type="text" #inputItem><button (click)="agregarItem(inputItem.value); inputItem.value=''; inputItem.focus();">Add</button>
+<p *ngIf="listaItems.length==0">Sin items por ahora...</p>
+
+<div *ngFor="let item of listaItems">
+    <span>
+        <input #cb type="checkbox" [(ngModel)]="item.terminado" (click)="test(cb.checked);"/>
+        <span *ngIf="!cb.checked; else tachado" class="noTachado">{{item.name}}</span>
+        <ng-template #tachado><del><span [class.tachado]="true">{{item.name}}</span></del></ng-template>
+        <button (click)="eliminarItem(listaItems.indexOf(item));">Delete</button>
+        
+    </span>
+</div>

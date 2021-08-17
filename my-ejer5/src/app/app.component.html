@@ -1,0 +1,10 @@
+<h1>A ChackList - Ejercicio 5</h1>
+<p>Refactoriza el Ejercicio 4 para que las llamadas a la API REST estén en un servicio stateless ItemsService</p>
+<input type="text" #inputItem>
+    <button (click)="agregarItem(inputItem.value); inputItem.value=''; inputItem.focus();">Add</button>
+
+    <p *ngIf="itemsList.length==0">Sin items por ahora...</p>
+
+<div *ngFor="let itemPadre of itemsList">
+<app-item  [itemHijo]="itemPadre" (emitterDelete)="deleteItem($event)"  (emitterCheck)="checkItem($event)"></app-item>
+</div>

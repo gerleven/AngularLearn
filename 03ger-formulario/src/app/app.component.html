@@ -1,0 +1,30 @@
+<h1>Formularios</h1>
+<!--Hay 2 maneras:-->
+<!--1) Bindg con checkBox y Radio Button-->
+<input type="checkbox"> <p>CheckBox solo</p>
+<input type="checkbox" [(ngModel)]="miChecked"><p>CheckBox con binding bidireccional a la variable checked</p>
+<button (click)="permutar()">Permutar variable checked</button>
+
+<h1>lista de la compra:</h1>
+<div *ngFor= "let item of listaCompra">
+    <input type="checkbox" [(ngModel)]="item.comprar"><span>{{item.name}}</span>
+</div>
+<br>
+
+<input type="text" [(ngModel)]="personajeElejido">
+<button (click)="seleccionarBatman()">Seleccionar Gatuvela</button>
+<br>
+<input type="radio" name="elegirPersonaje" [(ngModel)]="personajeElejido" value="Batman">Batman
+<input type="radio" name="elegirPersonaje" [(ngModel)]="personajeElejido" value="Robin">Robin
+<input type="radio" name="elegirPersonaje" [(ngModel)]="personajeElejido" value="Jocker">Jocker
+<input type="radio" name="elegirPersonaje" [(ngModel)]="personajeElejido" value="Pinguin">Pinguin
+<br>
+<br>
+<!--2)Acceso a los controles desde el codigo usando las TEMPLATE REFERENCE VARIABLES-->
+<h1>TEMPLATE REFERENCE VARIABLES</h1>
+<input type="text" #inputVerdura>
+<button (click)="agregarVerdura(inputVerdura.value); inputVerdura.value='';inputVerdura.focus()">Agregar a la lista</button> <!--Con este hacemos Focus desde el template (RECOMENDADO)-->
+<button (click)="agregarVerdura2(inputVerdura.value); inputVerdura.value=''; ">[[ Agregar a la lista]] focus desde el codigo</button> <!--Con este hacemos el focus desde el codigo, no recomendado por ser bajo nivel-->
+<div *ngFor="let verdura of listaVerduras">
+    <li>{{verdura}}</li>
+</div>

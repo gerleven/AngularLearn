@@ -1,0 +1,26 @@
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.cyan{
+    color:aqua;
+}
+
+.chocolate{
+    color: brown;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+}

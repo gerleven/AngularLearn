@@ -1,0 +1,9 @@
+<h1>Formularios</h1>
+<input type="checkbox"><p>CheckBox solo</p>
+<input type="checkbox" [(ngModel)]="miChecked"><p>CheckBox con binding bidireccional a la variable checked</p>
+<button (click)="permutar()">Permutar variable checked</button>
+
+<h1>lista de la compra:</h1>
+<span *ngFor= "let item of listaCompra">
+    <input type="checkbox" [(ngModel)]="item.comprar"><p>{{item.nombre}}</p>
+</span>

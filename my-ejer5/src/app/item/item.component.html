@@ -1,0 +1,6 @@
+<span class="itemCentrado">
+    <input type="checkbox" #cb [checked]="itemHijo.checked" (click)="checkItem();"/>
+    <span [class.tachado]="itemHijo.checked">{{itemHijo.description}}</span>
+    <!--<span></span>[style.textDecoration]="item.checked?'line-through':'none'">{{item.description}}</span>-->
+    <button (click)="eliminarItem();">Delete</button>
+</span>

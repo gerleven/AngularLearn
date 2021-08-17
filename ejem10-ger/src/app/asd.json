@@ -1,0 +1,106 @@
+"kind": "books#volumes",
+"totalItems": 200,
+"items": [
+  {
+    "kind": "books#volume",
+    "id": "zl13g5uRM4EC",
+    "etag": "dsCmO+ZofXI",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/zl13g5uRM4EC",
+    
+    
+    
+    
+    "volumeInfo": {
+      "title": "Harry Potter y la cámara secreta",
+      "authors": [
+        "J.K. Rowling"
+      ],
+      "publisher": "Pottermore Publishing",
+      "publishedDate": "2015-12-08",
+      "description": "«Hay una conspiración, Harry Potter. Una conspiración para hacer que este año sucedan las cosas más terribles en el Colegio Hogwarts de Magia y Hechicería.» El verano de Harry Potter ha incluido el peor cumpleaños de su vida, unos presagios muy poco halagüeños por parte de un elfo doméstico llamado Dobby y ser rescatado de casa de los Dursleys por su amigo Ron Weasley en un coche mágico volador. Cuando regresa al Colegio Hogwarts de Magia y Hechicería para cursar su segundo año, Harry escucha susurros extraños por los pasillos vacíos del colegio... Y luego comienzan los ataques. Se encuentran a estudiantes convertidos en piedra... Los terribles presagios de Dobby parecen hacerse realidad. Tema musical compuesto por James Hannigan.",
+      "industryIdentifiers": [
+        {
+          "type": "ISBN_13",
+          "identifier": "9781781101322"
+        },
+        {
+          "type": "ISBN_10",
+          "identifier": "1781101329"
+        }
+      ],
+      "readingModes": {
+        "text": true,
+        "image": true
+      },
+      "pageCount": 296,
+      "printType": "BOOK",
+      "categories": [
+        "Fiction"
+      ],
+      "averageRating": 4,
+      "ratingsCount": 45,
+      "maturityRating": "NOT_MATURE",
+      "allowAnonLogging": true,
+      "contentVersion": "1.7.7.0.preview.3",
+      "panelizationSummary": {
+        "containsEpubBubbles": false,
+        "containsImageBubbles": false
+      },
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=zl13g5uRM4EC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=zl13g5uRM4EC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "language": "un",
+      "previewLink": "http://books.google.com.ar/books?id=zl13g5uRM4EC&printsec=frontcover&dq=intitle:potter&hl=&cd=1&source=gbs_api",
+      "infoLink": "https://play.google.com/store/books/details?id=zl13g5uRM4EC&source=gbs_api",
+      "canonicalVolumeLink": "https://play.google.com/store/books/details?id=zl13g5uRM4EC"
+    },
+    "saleInfo": {
+      "country": "AR",
+      "saleability": "FOR_SALE",
+      "isEbook": true,
+      "listPrice": {
+        "amount": 104,
+        "currencyCode": "ARS"
+      },
+      "retailPrice": {
+        "amount": 104,
+        "currencyCode": "ARS"
+      },
+      "buyLink": "https://play.google.com/store/books/details?id=zl13g5uRM4EC&rdid=book-zl13g5uRM4EC&rdot=1&source=gbs_api",
+      "offers": [
+        {
+          "finskyOfferType": 1,
+          "listPrice": {
+            "amountInMicros": 104000000,
+            "currencyCode": "ARS"
+          },
+          "retailPrice": {
+            "amountInMicros": 104000000,
+            "currencyCode": "ARS"
+          }
+        }
+      ]
+    },
+    "accessInfo": {
+      "country": "AR",
+      "viewability": "PARTIAL",
+      "embeddable": true,
+      "publicDomain": false,
+      "textToSpeechPermission": "ALLOWED",
+      "epub": {
+        "isAvailable": true,
+        "acsTokenLink": "http://books.google.com.ar/books/download/Harry_Potter_y_la_c%C3%A1mara_secreta-sample-epub.acsm?id=zl13g5uRM4EC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+      },
+      "pdf": {
+        "isAvailable": true,
+        "acsTokenLink": "http://books.google.com.ar/books/download/Harry_Potter_y_la_c%C3%A1mara_secreta-sample-pdf.acsm?id=zl13g5uRM4EC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+      },
+      "webReaderLink": "http://play.google.com/books/reader?id=zl13g5uRM4EC&hl=&printsec=frontcover&source=gbs_api",
+      "accessViewStatus": "SAMPLE",
+      "quoteSharingAllowed": false
+    },
+    "searchInfo": {
+      "textSnippet": "«Hay una conspiración, Harry Potter."
+    }
+  },

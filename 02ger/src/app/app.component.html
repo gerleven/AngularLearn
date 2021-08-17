@@ -1,0 +1,44 @@
+<h1>Ejemplo Ger 02</h1>
+<!--Estilos-->
+
+
+<!--Pipe-->
+<p>Hoy es:{{fechaHoy | date}} y con date: "MM/dd/yy" {{fechaHoy | date: "MM/dd/yy"}}</p>
+
+<!--Templates ng For If Else-->
+<h1> Templates </h1>
+<h2> * ngif</h2>
+<p *ngIf="mostrar==true"> usamos *ngIf="mostrar==true". el * indica que el cmabio de la variable implica un cambio estructural en el DOM, osea que aparece y desaparece un nodo</p>
+<button (click)='permutarMostrar()'>{{mostrarTexto}}</button>
+<h2> * ngfor</h2>
+<div *ngFor="let i of nombres">{{i}}</div> <!--Aca normbres e sun array de string, en cambio persona es un array de objetos {nombre:, edad:}-->
+
+<p>Personas:</p>
+<div *ngFor="let j of personas">{{j.nombre}} de {{j.edad}}.</div>
+
+<p>Si quiero mezclar *ngIf y *ngFor ya no puedo usar la forma compacta de la sintaxis y toca usar la version expandida del ngFor dentro del ng-Template: </p>
+<ng-template ngFor let-persona [ngForOf]="personas">
+    <div *ngIf="persona.edad>18; else otraCosa">{{persona.nombre}} si es mayor de edad, tienee {{persona.edad}}</div>
+    <ng-template #otraCosa>{{persona.nombre}} es menor de edad --> este else se hace asi: *ngif="expresion"; else #otraCosa</ng-template>
+</ng-template>
+
+<p>optional chaining operator/ safe navigation operator:</p>
+<p>intentar accesder a la propiedad del objeto pero solo si el objeto existe y no es null ni undefined. si no tuviese el ? entonces cundo dios sea null o undefined directamente no mostraria el tag p entero, asi en cambio si lo muestra pero dejando vacio el campo de la variable dios.nombres</p>
+<p>persona no null: {{persona?.nombre}}- nombre de dios, si es que existe:{{dios?.nombre}}.</p>
+<!--      Des de ahora de arriba para abjo-->>
+<h2>Imput de texto con variable monodireccional:</h2>
+<input type="text" value="hint dle texto...">
+
+<!--Captura de evento click e invocar una funcion-->
+<button (click)="setName('John')"> <!-- Asi es como nos suscribimos a un evento, no hace falta buscar el elemento desde el .js con el document.getElementById y despues hacerle un addListener-->
+    Set name='jhon'
+</button>
+
+<!--Binding o datos enlazados bidireccionalmente-->
+<h2>Datos enlazados (Data binding) [(neModel)]: <br> Es un Imput de texto conectado a la variable name bidireccional mente: <br> < input type="text"[(ngModel)]="name"></h2>
+<input type="text"[(ngModel)]="name">
+
+<!--Variable unidireccional-->
+<p>la variable name vale: {{name}}</p>
+<h1>Hello {{name}}!</h1>
+<p>cargar una imagen usando [src] y teniendo el path en app.component:</p><img [src]="imgUrl"/> <!--dentro del tag se pone asi entre [] t fuera del tag con {}-->

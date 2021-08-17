@@ -1,0 +1,10 @@
+<h1>A ChackList - Ejercicio 5B</h1>
+<p>Refactoriza el Ejercicio 5 para usar pipe async</p>
+<input type="text" #inputItem>
+    <button (click)="agregarItem(inputItem.value); inputItem.value=''; inputItem.focus();">Add</button>
+
+    <p *ngIf="$itemsList[0]!=undefined">Sin items por ahora...</p>
+
+<div *ngFor="let itemPadre of ($itemsList | async)">
+<app-item  [itemHijo]="itemPadre" (emitterDelete)="deleteItem($event)"  (emitterCheck)="checkItem($event)"></app-item>
+</div>

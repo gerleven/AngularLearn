@@ -1,0 +1,11 @@
+<!--Al igual que en el index.html dentro del <body> insertamos el componente <app-root>, aca insertamos el componente miHeader el cual luego
+    tendra en su header.component.ts el selector: @Component({selector: 'miHeader',...-->
+<miHeader [atributoDelHijo]="atributoDelPadre" [otroAtributoDelHijo]="otroAtributoDelPadre"></miHeader>
+<!--"atributoDelHijo" tiene que coincidir con un atributo en el hijo marcado como @input()
+    PERO: La diferencia entre poner los [] y no ponerlos es que con [atributoDelHijo]="atributoDelPadre"
+    estamos indicando que "atributoDelPare" es una variable alojada en la logica del padre y no un simple string" -->
+<miHeader atributoDelHijo="atributoDelPadre? o un simple string" otroAtributoDelHijo="otroAtributoDelPadre?"></miHeader>
+<!--Aca de nuevo "atributoDelHijo" toeme qie cpomcodor con un atribujo del hijo marcado como @input()
+    PERO: al no tener los [] no buscar a "atributoDelPadre" como una variable dentro de la logica del padre si no que lo toma como un simple string y eso es 
+    lo que pasa como valor a la variable del hijo "atributoDelHijo"-->
+<p>Main content</p>
