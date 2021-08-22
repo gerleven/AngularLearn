@@ -30,7 +30,7 @@ export class AppComponent {
   }
 
   //3 activar clase con un string
-  objMapaClases={
+  objMapaClases={ //Activar las clases con un mapa de string a boolean
     "pinky":true,
     "bold": false,
     "chocolate": false
@@ -42,8 +42,9 @@ export class AppComponent {
     for(let i in this.objMapaClases){ //Por que no funciona el for in para recorrer los keys de un objeto?
       i=false;
     {
-      */
+    */
   }
+  
 //4)
 tamanioLetra=10;
 agrandarTamanio(){
@@ -102,7 +103,7 @@ aplicarEstilos2(){
   }
 
   changeParagraph(){
-    this.pClasses.bold = true;
+    this.pClasses.bold = !this.pClasses.bold; //Esto modifica el mapa de string a boolean pCLasses para que bold pase de false  atrue
   }
 
   showText(){

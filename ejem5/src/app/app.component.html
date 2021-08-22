@@ -15,11 +15,13 @@
 <h1 [ngClass]="objMapaClases">gnClass Chocolate</h1>
 <button (click)="activarChocolate()">Chocolate</button>
 
-<h1 [style.fontSize.px]=tamanioLetra>Con [style.property.unidadDeMedida]=tamanioLetra accedemos directamente a una propiedad del style como ser el fontSize</h1>
+<h1 [style.fontSize.px]=tamanioLetra>
+    Con [style.property.unidadDeMedida]=tamanioLetra accedemos directamente a una propiedad del style como ser el fontSize
+</h1> <!--4) Asociar un estilo concreto a un atributo-->
 <button (click)="achicarTamanio()">   -   </button>
 <button (click)="agrandarTamanio()">  +  </button>
 
-<h1 [ngStyle]="aplicarEstilos()"> con ngStyle="variable/metodo"</h1>
+<h1 [ngStyle]="aplicarEstilos()"> con ngStyle="variable/metodo"</h1> <!--4) Asociar un estilo concreto a un atributo. Usando mapas de propiedad a valor-->
 <p>Al presionar el boton se aplicaran los siguientes estilos: 'font-size','color' y 'font-weight'</p>
 <button (click)="aplicarEstilos1()">Aplicar estilos 1</button>
 <button (click)="aplicarEstilos2()">Aplicar estilos 2</button>
@@ -30,8 +32,8 @@
 
 
 <!--Ejemplos del tipo:-->
-<h1 [class]="className">Hello {{name}}!</h1>
-<h1 [class.red]="redActive">Hello {{name}}!</h1>
+<h1 [class]="className">Hello {{name}}!</h1> <!--1) Asociar la clase de un elemento a un atributo string-->
+<h1 [class.red]="redActive">Hello {{name}}!</h1> <!-- 2) Activar una clase concreta con un atributo boolean-->
 <button (click)="setClass('red')">Red</button>
 <button (click)="setClass('blue')">Blue</button>
 <button (click)="setClass('yellow')">Yellow</button>
@@ -44,11 +46,11 @@
 <br>
 
 <button (click)="showText()">Show text</button>
-<button (click)="changeParagraph()">Change Paragraph</button>
+<button (click)="changeParagraph()">Change bold of Paragraph</button>
 
 <p *ngIf="visible">Text</p>
 <p *ngIf="num == 3">Num 3</p>
-<p [ngClass]="pClasses">Text</p>
+<p [ngClass]="pClasses">Text</p>  <!-- 3) Activar las clases con un mapa-->
 
 <div *ngFor="let elem of elems">{{elem.desc}}</div>
 
