@@ -1,9 +1,21 @@
-<h1>Ejemplo Ger 02</h1>
+<h1>Ejemplo Ger 02 Sobre *ngIF y *ngFor</h1>
 <!--Estilos-->
 
+<p *ngIf="german.edad>18">German es mayo de edad: tiene {{german.edad}}</p>
+<ng-template ngFor let-NombreDeVariableCUalquiera [ngForOf]="personas">
+    <div *ngIf="NombreDeVariableCUalquiera.edad>18; else menorDeEdad">2!: {{NombreDeVariableCUalquiera.nombre}}</div>
+    <ng-template #menorDeEdad> 3!: {{NombreDeVariableCUalquiera.nombre}} es menor</ng-template>
+    
+</ng-template>
+
+<ng-template ngFor let-persona [ngForOf]="personas">
+    <p>{{persona.nombre}}</p>
+</ng-template>
 
 <!--Pipe-->
 <p>Hoy es:{{fechaHoy | date}} y con date: "MM/dd/yy" {{fechaHoy | date: "MM/dd/yy"}}</p>
+<p>Mi cumple es el {{miCumple | date: "dd/MM/yyyy"}}</p>
+<p>una fecha cualquiera: {{"08/02/2021" | date: "dd/MM/YYYY"}}</p>
 
 <!--Templates ng For If Else-->
 <h1> Templates </h1>
@@ -22,10 +34,12 @@
     <ng-template #otraCosa>{{persona.nombre}} es menor de edad --> este else se hace asi: *ngif="expresion"; else #otraCosa</ng-template>
 </ng-template>
 
+<!--Optional chaining operator/ safe navigation operator-->
 <p>optional chaining operator/ safe navigation operator:</p>
 <p>intentar accesder a la propiedad del objeto pero solo si el objeto existe y no es null ni undefined. si no tuviese el ? entonces cundo dios sea null o undefined directamente no mostraria el tag p entero, asi en cambio si lo muestra pero dejando vacio el campo de la variable dios.nombres</p>
 <p>persona no null: {{persona?.nombre}}- nombre de dios, si es que existe:{{dios?.nombre}}.</p>
-<!--      Des de ahora de arriba para abjo-->>
+
+<!--      Des de ahora de arriba para abjo-->
 <h2>Imput de texto con variable monodireccional:</h2>
 <input type="text" value="hint dle texto...">
 

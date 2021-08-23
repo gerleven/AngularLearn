@@ -42,8 +42,13 @@ export class AppComponent {
     nombre: 'jesus',
     edad: 2021
   }
+  german={
+    nombre: "german",
+    edad: 33
+  }
   dios=undefined;
 
   fechaHoy = new Date(2021,6,14);
+  miCumple = new Date(2021,8,2);
   fechaAhora = Date.now;
 }

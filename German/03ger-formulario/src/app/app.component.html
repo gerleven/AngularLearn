@@ -1,8 +1,13 @@
 <h1>Formularios</h1>
 <!--Hay 2 maneras:-->
 <!--1) Bindg con checkBox y Radio Button-->
-<input type="checkbox"> <p>CheckBox solo</p>
-<input type="checkbox" [(ngModel)]="miChecked"><p>CheckBox con binding bidireccional a la variable checked</p>
+<input type="checkbox"> <span>CheckBox solo</span>
+<br>
+<input type="checkbox" [(ngModel)]="miChecked"><span>CheckBox con binding bidireccional a la variable miChecked</span>
+<br>
+<p>Variable miChecked vale {{miChecked}}</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Google_Material_Design_check.svg/512px-Google_Material_Design_check.svg.png" *ngIf="miChecked" style="height: 30px;">
+<br>
 <button (click)="permutar()">Permutar variable checked</button>
 
 <h1>lista de la compra:</h1>
@@ -22,7 +27,7 @@
 <br>
 <!--2)Acceso a los controles desde el codigo usando las TEMPLATE REFERENCE VARIABLES-->
 <h1>TEMPLATE REFERENCE VARIABLES</h1>
-<input type="text" #inputVerdura>
+<input type="text" #inputVerdura placeholder="Ingrese una verdura..."> <!--Con placeholder podemos agregar un hint -->
 <button (click)="agregarVerdura(inputVerdura.value); inputVerdura.value='';inputVerdura.focus()">Agregar a la lista</button> <!--Con este hacemos Focus desde el template (RECOMENDADO)-->
 <button (click)="agregarVerdura2(inputVerdura.value); inputVerdura.value=''; ">[[ Agregar a la lista]] focus desde el codigo</button> <!--Con este hacemos el focus desde el codigo, no recomendado por ser bajo nivel-->
 <div *ngFor="let verdura of listaVerduras">

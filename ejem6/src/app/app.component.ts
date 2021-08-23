@@ -32,7 +32,9 @@ export class AppComponent {
 
     city: string;
     
-    @ViewChild('titleInput') titleInput: ElementRef;
+    @ViewChild('titleInputDOM')
+    titleInputRef: ElementRef;
+    
     title: string;
     
     update(city: string) {
@@ -41,8 +43,8 @@ export class AppComponent {
     }
 
     updateTitle() {
-        this.title = this.titleInput.nativeElement.value;
-        this.titleInput.nativeElement.value = '';
-        this.titleInput.nativeElement.focus();
+        this.title = this.titleInputRef.nativeElement.value;
+        this.titleInputRef.nativeElement.value = '';
+        this.titleInputRef.nativeElement.focus();
     }
 }
