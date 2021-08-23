@@ -20,9 +20,13 @@ export class AppComponent {
     this.httpClient.get(url).subscribe(
       response => {
         let data: any = response;
+        console.log("data json: ",data);
+        
         for (var i = 0; i < data.items.length; i++) {
           let bookTitle = data.items[i].volumeInfo.title;
           this.titles.push(bookTitle);
+          console.log("actual item dentro del Json: ",data.items[i]);
+          
         }
       },
       error => console.error(error)

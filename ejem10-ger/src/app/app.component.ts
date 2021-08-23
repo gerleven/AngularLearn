@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http'; //Cuidado aca que no te impor
 })
 export class AppComponent {
 
-titles: string[]= [];
+titles: string[];
 
 constructor(private httpClient: HttpClient){}
 

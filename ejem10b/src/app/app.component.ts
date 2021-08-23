@@ -15,7 +15,7 @@ export class AppComponent {
 
     this.titles = [];
 
-    let url = "/books/v1/volumes?q=intitle:" + title;
+    let url = "/books/v1/volumes?q=intitle:" + title; //Notar que aca ya no usamos la ruta entera ("https://www.googleapis.com/books/v1/volumes?q=intitle:"+title), usamos la ruta relativa gracias al proxy
 
     this.httpClient.get(url).subscribe(
       response => {

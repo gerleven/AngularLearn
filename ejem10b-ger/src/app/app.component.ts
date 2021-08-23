@@ -15,6 +15,26 @@ constructor(private httpClient: HttpClient){}
 searchBook(book: string){
   //let url="https://www.googleapis.com/books/v1/volumes?q=intitle:"+book
   let url="/books/v1/volumes?q=intitle:"+book
+  /*
+      NOTA: Ahora la ruta es relativa porque tenemos el Proxy:
+      
+      Diapositiva del PDF:
+      Contenido del archivo proxy.config.json dentro de la carpeta src:
+      {
+          "/books/*": {
+              "target": "https://www.googleapis.com/",
+              "secure": false,
+              "logLevel": "debug",
+              "changeOrigin": true
+          }
+      }
+
+      Comando para ejecutar la App desde el proxy:
+      $ ng serve --proxy-config proxy.conf.json
+      
+      Ruta relativa del codigo:
+      let url = "/books/v1/volumes?q=intitle:" + title;
+  */
 
   this.httpClient.get(url).subscribe(
     response=>{

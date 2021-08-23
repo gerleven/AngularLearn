@@ -1,0 +1,791 @@
+
+{
+"__comment":"Ejemplo de lo que responde al API con java",  
+    "kind": "books#volumes",
+    "totalItems": 200,
+    "items": [
+      {
+        "kind": "books#volume",
+        "id": "5Msdh5n-qacC",
+        "etag": "H2D0yh5ApUY",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/5Msdh5n-qacC",
+        "volumeInfo": {
+          "title": "Java y Eclipse",
+          "subtitle": "desarrolle una aplicación con Java y Eclipse",
+          "authors": [
+            "Frédéric Déléchamp"
+          ],
+          "publishedDate": "2018",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_10",
+              "identifier": "2409016839"
+            },
+            {
+              "type": "ISBN_13",
+              "identifier": "9782409016837"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": true
+          },
+          "pageCount": 544,
+          "printType": "BOOK",
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "1.0.1.0.preview.1",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=5Msdh5n-qacC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=5Msdh5n-qacC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          },
+          "language": "es",
+          "previewLink": "http://books.google.com.ar/books?id=5Msdh5n-qacC&printsec=frontcover&dq=intitle:java&hl=&cd=1&source=gbs_api",
+          "infoLink": "http://books.google.com.ar/books?id=5Msdh5n-qacC&dq=intitle:java&hl=&source=gbs_api",
+          "canonicalVolumeLink": "https://books.google.com/books/about/Java_y_Eclipse.html?hl=&id=5Msdh5n-qacC"
+        },
+        "saleInfo": {
+          "country": "AR",
+          "saleability": "NOT_FOR_SALE",
+          "isEbook": false
+        },
+        "accessInfo": {
+          "country": "AR",
+          "viewability": "PARTIAL",
+          "embeddable": true,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false
+          },
+          "pdf": {
+            "isAvailable": false
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=5Msdh5n-qacC&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "SAMPLE",
+          "quoteSharingAllowed": false
+        }
+      },
+      {
+        "kind": "books#volume",
+        "id": "is3BCwAAQBAJ",
+        "etag": "KPTAUp1/chI",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/is3BCwAAQBAJ",
+        "volumeInfo": {
+          "title": "Aprende a programar con Java ( 2.ª edición)",
+          "authors": [
+            "JIMÉNEZ MARÍN, ALFONSO",
+            "PÉREZ MONTES, FRANCISCO MANUEL"
+          ],
+          "publisher": "Ediciones Paraninfo, S.A.",
+          "publishedDate": "2016-01-01",
+          "description": "Este libro va dirigido a aquellas personas que necesitan iniciarse en el mundo de la programación partiendo de cero, es decir, sin conocimientos previos. Está pensado para el aprendizaje autodidacta, aunque también sirve como apoyo práctico para el estudio de la programación en facultades, escuelas universitarias y ciclos superiores de formación profesional. En esta segunda edición se ha revisado y actualizado el contenido para introducir las importantes novedades incorporadas en la versión 8 de Java. Se han reelaborado algunos capítulos y se han añadido otros nuevos. Asimismo, se han incluido nuevos ejercicios que permiten poner en práctica los nuevos conceptos incluidos. Para aprender a programar se puede usar cualquier lenguaje. Para esta obra se ha elegido el lenguaje Java por ser el más extendido en el mundo de las empresas y en internet dadas su seguridad y su portabilidad. La metodología seguida es eminentemente práctica, pues está basada en breves introducciones teóricas con abundantes ejemplos a las que siguen numerosos ejercicios prácticos, resueltos con detalle y cuya dificultad crece gradualmente. Por ello, si el lector sigue el libro hasta el final con dedicación y paciencia, estará en posesión de los conceptos y las herramientas más importantes de la programación avanzada y del lenguaje Java sin excesiva dificultad.",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9788428338578"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "8428338574"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": true
+          },
+          "pageCount": 402,
+          "printType": "BOOK",
+          "categories": [
+            "Education"
+          ],
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": true,
+          "contentVersion": "0.4.1.0.preview.1",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=is3BCwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=is3BCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          },
+          "language": "es",
+          "previewLink": "http://books.google.com.ar/books?id=is3BCwAAQBAJ&printsec=frontcover&dq=intitle:java&hl=&cd=2&source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=is3BCwAAQBAJ&source=gbs_api",
+          "canonicalVolumeLink": "https://play.google.com/store/books/details?id=is3BCwAAQBAJ"
+        },
+        "saleInfo": {
+          "country": "AR",
+          "saleability": "FOR_SALE",
+          "isEbook": true,
+          "listPrice": {
+            "amount": 1749.15,
+            "currencyCode": "ARS"
+          },
+          "retailPrice": {
+            "amount": 1749.15,
+            "currencyCode": "ARS"
+          },
+          "buyLink": "https://play.google.com/store/books/details?id=is3BCwAAQBAJ&rdid=book-is3BCwAAQBAJ&rdot=1&source=gbs_api",
+          "offers": [
+            {
+              "finskyOfferType": 1,
+              "listPrice": {
+                "amountInMicros": 1749150000,
+                "currencyCode": "ARS"
+              },
+              "retailPrice": {
+                "amountInMicros": 1749150000,
+                "currencyCode": "ARS"
+              }
+            }
+          ]
+        },
+        "accessInfo": {
+          "country": "AR",
+          "viewability": "PARTIAL",
+          "embeddable": true,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false
+          },
+          "pdf": {
+            "isAvailable": true,
+            "acsTokenLink": "http://books.google.com.ar/books/download/Aprende_a_programar_con_Java_2_%C2%AA_edici-sample-pdf.acsm?id=is3BCwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=is3BCwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "SAMPLE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "Este libro va dirigido a aquellas personas que necesitan iniciarse en el mundo de la programación partiendo de cero, es decir, sin conocimientos previos."
+        }
+      },
+      {
+        "kind": "books#volume",
+        "id": "Sj_qPAAACAAJ",
+        "etag": "D/+WTdrEGX8",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/Sj_qPAAACAAJ",
+        "volumeInfo": {
+          "title": "Piensa en Java",
+          "authors": [
+            "Bruce Eckel"
+          ],
+          "publisher": "PRENTICE HALL",
+          "publishedDate": "2007",
+          "description": "Piensa en Java cuarta edición, introduce todos los fundamentos teóricos y prácticos del lenguaje Java, exponiendo con claridad y rigor lo que hace el lenguaje y el porqué.",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_10",
+              "identifier": "8489660344"
+            },
+            {
+              "type": "ISBN_13",
+              "identifier": "9788489660342"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": false
+          },
+          "pageCount": 974,
+          "printType": "BOOK",
+          "categories": [
+            "Computers"
+          ],
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "preview-1.0.0",
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=Sj_qPAAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=Sj_qPAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+          },
+          "language": "es",
+          "previewLink": "http://books.google.com.ar/books?id=Sj_qPAAACAAJ&dq=intitle:java&hl=&cd=3&source=gbs_api",
+          "infoLink": "http://books.google.com.ar/books?id=Sj_qPAAACAAJ&dq=intitle:java&hl=&source=gbs_api",
+          "canonicalVolumeLink": "https://books.google.com/books/about/Piensa_en_Java.html?hl=&id=Sj_qPAAACAAJ"
+        },
+        "saleInfo": {
+          "country": "AR",
+          "saleability": "NOT_FOR_SALE",
+          "isEbook": false
+        },
+        "accessInfo": {
+          "country": "AR",
+          "viewability": "NO_PAGES",
+          "embeddable": false,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false
+          },
+          "pdf": {
+            "isAvailable": false
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=Sj_qPAAACAAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "NONE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "Piensa en Java cuarta edición, introduce todos los fundamentos teóricos y prácticos del lenguaje Java, exponiendo con claridad y rigor lo que hace el lenguaje y el porqué."
+        }
+      },
+      {
+        "kind": "books#volume",
+        "id": "x8wRTkfnU4kC",
+        "etag": "MeGrkWab/7U",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/x8wRTkfnU4kC",
+        "volumeInfo": {
+          "title": "Patrones de diseño en Java",
+          "subtitle": "Los 23 modelos de diseño: descripción y solución ilustradas en UML 2 y Java",
+          "authors": [
+            "Laurent Debrauwer"
+          ],
+          "publisher": "Ediciones ENI",
+          "publishedDate": "2013",
+          "description": "\"Este libro presenta de forma concisa y práctica los 23 modelos de diseño (Design Patterns) fundamentales ilustrándolos mediante ejemplos adaptados y fáciles de comprender. Cada ejemplo se describe en UML y en Java bajo la forma de un pequeño programa completo y ejecutable. Para cada patrón el autor detalla su nombre, el problema correspondiente, la solución propuesta, sus dominios de aplicación y su estructura genérica. El libro está dirigido a aquellos diseñadores y desarrolladores que trabajen con Programación Orientada a Objetos. Para comprenderlo bien, es preferible tener conocimientos previos acerca de los principales elementos de los diagramas de clases UML y la última versión del lenguaje Java. El libro está organizado en tres partes que se corresponden con las tres familias de patrones de diseño: los patrones de construcción, los patrones de estructuración y los patrones de comportamiento. A continuación, se incluye un capítulo que presenta tres variantes de patrones existentes, mostrando la gran flexibilidad existente a la hora de implementar estos modelos. También se aborda el patrón compuesto MVC (Model-View-Controller)\"--ENI Ediciones.",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_10",
+              "identifier": "274608645X"
+            },
+            {
+              "type": "ISBN_13",
+              "identifier": "9782746086456"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": true
+          },
+          "pageCount": 356,
+          "printType": "BOOK",
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "1.5.2.0.preview.1",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=x8wRTkfnU4kC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=x8wRTkfnU4kC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          },
+          "language": "es",
+          "previewLink": "http://books.google.com.ar/books?id=x8wRTkfnU4kC&printsec=frontcover&dq=intitle:java&hl=&cd=4&source=gbs_api",
+          "infoLink": "http://books.google.com.ar/books?id=x8wRTkfnU4kC&dq=intitle:java&hl=&source=gbs_api",
+          "canonicalVolumeLink": "https://books.google.com/books/about/Patrones_de_dise%C3%B1o_en_Java.html?hl=&id=x8wRTkfnU4kC"
+        },
+        "saleInfo": {
+          "country": "AR",
+          "saleability": "NOT_FOR_SALE",
+          "isEbook": false
+        },
+        "accessInfo": {
+          "country": "AR",
+          "viewability": "PARTIAL",
+          "embeddable": true,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false
+          },
+          "pdf": {
+            "isAvailable": false
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=x8wRTkfnU4kC&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "SAMPLE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "&quot;Este libro presenta de forma concisa y práctica los 23 modelos de diseño (Design Patterns) fundamentales ilustrándolos mediante ejemplos adaptados y fáciles de comprender."
+        }
+      },
+      {
+        "kind": "books#volume",
+        "id": "AK9JDwAAQBAJ",
+        "etag": "uwFt5BRGyuE",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/AK9JDwAAQBAJ",
+        "volumeInfo": {
+          "title": "Java básico",
+          "authors": [
+            "Wanumen Silva Luis Felipe",
+            "Mosquera Palacios Darín Jairo",
+            "Trujillo Edwin"
+          ],
+          "publisher": "Ecoe Ediciones",
+          "publishedDate": "2018",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9789587715422"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "958771542X"
+            }
+          ],
+          "readingModes": {
+            "text": true,
+            "image": false
+          },
+          "pageCount": 226,
+          "printType": "BOOK",
+          "categories": [
+            "Computers"
+          ],
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "1.1.1.0.preview.2",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=AK9JDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=AK9JDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          },
+          "language": "es",
+          "previewLink": "http://books.google.com.ar/books?id=AK9JDwAAQBAJ&printsec=frontcover&dq=intitle:java&hl=&cd=5&source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=AK9JDwAAQBAJ&source=gbs_api",
+          "canonicalVolumeLink": "https://play.google.com/store/books/details?id=AK9JDwAAQBAJ"
+        },
+        "saleInfo": {
+          "country": "AR",
+          "saleability": "FOR_SALE",
+          "isEbook": true,
+          "listPrice": {
+            "amount": 1361.5,
+            "currencyCode": "ARS"
+          },
+          "retailPrice": {
+            "amount": 1361.5,
+            "currencyCode": "ARS"
+          },
+          "buyLink": "https://play.google.com/store/books/details?id=AK9JDwAAQBAJ&rdid=book-AK9JDwAAQBAJ&rdot=1&source=gbs_api",
+          "offers": [
+            {
+              "finskyOfferType": 1,
+              "listPrice": {
+                "amountInMicros": 1361500000,
+                "currencyCode": "ARS"
+              },
+              "retailPrice": {
+                "amountInMicros": 1361500000,
+                "currencyCode": "ARS"
+              }
+            }
+          ]
+        },
+        "accessInfo": {
+          "country": "AR",
+          "viewability": "PARTIAL",
+          "embeddable": true,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": true,
+            "acsTokenLink": "http://books.google.com.ar/books/download/Java_b%C3%A1sico-sample-epub.acsm?id=AK9JDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+          },
+          "pdf": {
+            "isAvailable": false
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=AK9JDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "SAMPLE",
+          "quoteSharingAllowed": false
+        }
+      },
+      {
+        "kind": "books#volume",
+        "id": "AWGnDAAAQBAJ",
+        "etag": "o7gWlvj6nB0",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/AWGnDAAAQBAJ",
+        "volumeInfo": {
+          "title": "Interfaces gráficas en Java",
+          "authors": [
+            "Micael Gallego Carrillo",
+            "María del Soto Montalvo Herranz"
+          ],
+          "publisher": "Editorial Universitaria Ramon Areces",
+          "publishedDate": "2005-09-01",
+          "description": "Este libro presenta los conceptos básicos que se aplican en la construcción de cualquier tipo de interfaz gráfica de usuario y su implimentación en el lenguaje Java, ofreciendo una visión global y de alto nivel sobre la tecnología y sus posibilidades. Constituye un manual de gran utilidad para cualquier persona que conozca el lenguaje Java y que quiera aprender a construir aplicaciones con interfaz gráfica de usuario mediante dicho lenguaje de programación",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9788480047081"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "8480047089"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": false
+          },
+          "pageCount": 248,
+          "printType": "BOOK",
+          "categories": [
+            "Computers"
+          ],
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "0.1.0.0.preview.0",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=AWGnDAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=AWGnDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          },
+          "language": "es",
+          "previewLink": "http://books.google.com.ar/books?id=AWGnDAAAQBAJ&printsec=frontcover&dq=intitle:java&hl=&cd=6&source=gbs_api",
+          "infoLink": "http://books.google.com.ar/books?id=AWGnDAAAQBAJ&dq=intitle:java&hl=&source=gbs_api",
+          "canonicalVolumeLink": "https://books.google.com/books/about/Interfaces_gr%C3%A1ficas_en_Java.html?hl=&id=AWGnDAAAQBAJ"
+        },
+        "saleInfo": {
+          "country": "AR",
+          "saleability": "NOT_FOR_SALE",
+          "isEbook": false
+        },
+        "accessInfo": {
+          "country": "AR",
+          "viewability": "PARTIAL",
+          "embeddable": true,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false
+          },
+          "pdf": {
+            "isAvailable": false
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=AWGnDAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "SAMPLE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "Este libro presenta los conceptos básicos que se aplican en la construcción de cualquier tipo de interfaz gráfica de usuario y su implimentación en el lenguaje Java, ofreciendo una visión global y de alto nivel sobre la tecnología y ..."
+        }
+      },
+      {
+        "kind": "books#volume",
+        "id": "Uo-fDwAAQBAJ",
+        "etag": "VSgACcudso8",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/Uo-fDwAAQBAJ",
+        "volumeInfo": {
+          "title": "Java 2: Manual de Usuario y Tutorial. 5ª Edición",
+          "authors": [
+            "Agustín Froufe Quintas"
+          ],
+          "publisher": "Grupo Editorial RA-MA",
+          "description": "TODO LO QUE NECESITA SABER SOBRE LA PLATAFORMA JAVA™ 2. Java ofrece un lenguaje de programación poderoso y flexible, a la vez que sencillo, potente, seguro, eficaz y universal, por lo que constituye el instrumento ideal para el desarrollador actual de aplicaciones. Este libro le enseñará todo lo que Java puede hacer y cómo hacerlo. Java no está diseñado solamente para realizar applets o acceder a Internet. En este libro se describe toda su potencia, que le permitirá sentar las bases para llegar hasta donde nunca antes llegó ningún desarrollador de código. La obra está estructurada en 21 capítulos; comienza con una introducción sobre el lenguaje Java para enseguida proporcionar información sobre los aspectos más importantes de la plataforma Java 2: - Fundamentos del lenguaje - Anotaciones - Operadores - Modelo de delegación de eventos - Control del flujo de programación - AWT - Expresiones - Swing - Colecciones de datos - Gráficos - Clases - Comunicaciones en red - Interfaces - Sockets TCP/IP, UDP - Paquetes - Multicast - Ficheros - Comunicaciones seguras - Arquitectura NIO - Servlets, páginas JSP - Multitarea - JDBC, Rowset - Scheduling - RMI - Tipos genéricos - JMX, jconsole Se incluye una completa revisión del modelo de delegación de eventos, un estudio básico del desarrollo de Servlets, comunicaciones en red a través de sockets, multicast, punto-a-punto, comunicaciones seguras SSL, acceso a bases de datos mediante JDBC, comunicaciones RMI, introducción a la mensajería JMX, etc. También se tratan las características más importantes aportadas por Java2 SE 6 a Java: anotaciones, colecciones navegables, ventanas modales, splash screen, system tray, nueva API de escritorio, arrastrar y soltar, acceso avanzado a redes, uso de JavaDB, etc. Con el libro se adjunta un CD-ROM que contiene el código completo de los más de 300 ejemplos que ilustran los conceptos explicados en el texto, permitiendo probarlos inmediatamente; también incluye herramientas de programación y entornos integrados de desarrollo para plataformas Linux y Windows.",
+          "industryIdentifiers": [
+            {
+              "type": "OTHER",
+              "identifier": "PKEY:GREDRA75"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": true
+          },
+          "pageCount": 694,
+          "printType": "BOOK",
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "0.4.1.0.preview.1",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=Uo-fDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=Uo-fDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          },
+          "language": "es",
+          "previewLink": "http://books.google.com.ar/books?id=Uo-fDwAAQBAJ&printsec=frontcover&dq=intitle:java&hl=&cd=7&source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=Uo-fDwAAQBAJ&source=gbs_api",
+          "canonicalVolumeLink": "https://play.google.com/store/books/details?id=Uo-fDwAAQBAJ"
+        },
+        "saleInfo": {
+          "country": "AR",
+          "saleability": "FOR_SALE",
+          "isEbook": true,
+          "listPrice": {
+            "amount": 2109.78,
+            "currencyCode": "ARS"
+          },
+          "retailPrice": {
+            "amount": 2109.78,
+            "currencyCode": "ARS"
+          },
+          "buyLink": "https://play.google.com/store/books/details?id=Uo-fDwAAQBAJ&rdid=book-Uo-fDwAAQBAJ&rdot=1&source=gbs_api",
+          "offers": [
+            {
+              "finskyOfferType": 1,
+              "listPrice": {
+                "amountInMicros": 2109780000,
+                "currencyCode": "ARS"
+              },
+              "retailPrice": {
+                "amountInMicros": 2109780000,
+                "currencyCode": "ARS"
+              }
+            }
+          ]
+        },
+        "accessInfo": {
+          "country": "AR",
+          "viewability": "PARTIAL",
+          "embeddable": true,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false
+          },
+          "pdf": {
+            "isAvailable": true,
+            "acsTokenLink": "http://books.google.com.ar/books/download/Java_2_Manual_de_Usuario_y_Tutorial_5%C2%AA-sample-pdf.acsm?id=Uo-fDwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=Uo-fDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "SAMPLE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "TODO LO QUE NECESITA SABER SOBRE LA PLATAFORMA JAVA™ 2."
+        }
+      },
+      {
+        "kind": "books#volume",
+        "id": "IZFdQwAACAAJ",
+        "etag": "t/o125QZoD4",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/IZFdQwAACAAJ",
+        "volumeInfo": {
+          "title": "Java 2. Básico.",
+          "authors": [
+            "Carmen Fernández"
+          ],
+          "publishedDate": "2008-12",
+          "description": "Java es un lenguaje de programación orientado a objetos introducido por Sun Microsystems cuyas características lo sitúan, junto con C#, en uno de los productos ideales para desarrollar programas para la Web. Para construir aplicaciones Java podemos utilizar el entorno de desarrollo integrado (IDE) NetBeans. Se trata de un proyecto de código abierto para desarrollar una herramienta para que los programadores puedan escribir, compilar, depurar y ejecutar programas en Java, aunque puede servir para otros lenguajes. Este entorno se apoya en el JDK (Java Development Kit) de Sun Microsystems que, de una forma sencilla, no es más que un conjunto de programas y bibliotecas para escribir programas Java y ejecutarlos. Este libro se ha escrito con la intención de que un principiante pueda aprender de una forma sencilla a programar con el lenguaje Java. Por eso, todos los capítulos van documentados con ejemplos resueltos. Finalmente, una vez superada la etapa de aprendizaje, puede profundizar más en la materia siguiendo la bibliografía recomendada en el prólogo de este libro. Así mismo, podrá descargarse desde www.starbook.es, en la página Web correspondiente al libro, un CD-ROM con todos los ejemplos realizados y con las direcciones de Internet desde las que se podrá descargar el software necesario para que el lector pueda reproducirlos durante el estudio.",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_10",
+              "identifier": "8493689653"
+            },
+            {
+              "type": "ISBN_13",
+              "identifier": "9788493689650"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": false
+          },
+          "pageCount": 176,
+          "printType": "BOOK",
+          "categories": [
+            "Computers"
+          ],
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "preview-1.0.0",
+          "language": "es",
+          "previewLink": "http://books.google.com.ar/books?id=IZFdQwAACAAJ&dq=intitle:java&hl=&cd=8&source=gbs_api",
+          "infoLink": "http://books.google.com.ar/books?id=IZFdQwAACAAJ&dq=intitle:java&hl=&source=gbs_api",
+          "canonicalVolumeLink": "https://books.google.com/books/about/Java_2_B%C3%A1sico.html?hl=&id=IZFdQwAACAAJ"
+        },
+        "saleInfo": {
+          "country": "AR",
+          "saleability": "NOT_FOR_SALE",
+          "isEbook": false
+        },
+        "accessInfo": {
+          "country": "AR",
+          "viewability": "NO_PAGES",
+          "embeddable": false,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false
+          },
+          "pdf": {
+            "isAvailable": false
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=IZFdQwAACAAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "NONE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "Java es un lenguaje de programación orientado a objetos introducido por Sun Microsystems cuyas características lo sitúan, junto con C#, en uno de los productos ideales para desarrollar programas para la Web."
+        }
+      },
+      {
+        "kind": "books#volume",
+        "id": "4v8QCgAAQBAJ",
+        "etag": "nnTRzGVrDbY",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/4v8QCgAAQBAJ",
+        "volumeInfo": {
+          "title": "Comenzando a programar con JAVA",
+          "authors": [
+            "P. Pablo Garrido Abenza"
+          ],
+          "publisher": "Universidad Miguel Hernández",
+          "publishedDate": "2015-07-02",
+          "description": "El presente libro reúne en un único documento todos los contenidos que se han considerado más relevantes para comenzar a programar con el lenguaje de programación Java, llegando a cubrir una buena parte de la edición estándar de Java o Java SE, e incluyendo características nuevas aparecidas en la versión Java 7. Parte desde lo más básico, describiendo las distintas características fundamentales del lenguaje de forma progresiva y mostrando ejemplos sencillos y funcionales en todo momento. El texto puede seguirse sin tener conocimiento alguno sobre otros lenguajes de programación, aunque un cierto conocimiento del lenguaje C o C++ puede ser de mucha utilidad. Se estructura en trece capítulos y cada uno de ellos presenta al principio sus objetivos concretos. Comienza explicando la estructura de los programas, tipos primitivos, sentencias de control de flujo, arrays, cadenas de caracteres, gestión de excepciones, aserciones, colecciones de datos. Una vez sentadas las bases se presenta la metodología de la Programación Orientada a Objetos (POO), que se utilizará en el resto del libro. En capítulos posteriores se hace hincapié especialmente en el desarrollo de aplicaciones gráficas mediante la librería AWT, y applets o aplicaciones ejecutables desde Internet. A continuación se presenta el concepto de flujo para el acceso a archivos y comunicaciones en red mediante sockets. El libro termina haciendo una introducción al acceso a bases de datos relacionales mediante JDBC y el lenguaje SQL, así como la posibilidad de escribir programas concurrentes o multi-hilo. Al comenzar el aprendizaje de un lenguaje como Java es fácil sentirse abrumado ante la magnitud de información existente tanto impresa como electrónica. Se espera que este libro facilite el comenzar a programar con Java.",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9788416024247"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "8416024243"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": true
+          },
+          "printType": "BOOK",
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": true,
+          "contentVersion": "preview-1.0.0",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=4v8QCgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=4v8QCgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          },
+          "language": "es",
+          "previewLink": "http://books.google.com.ar/books?id=4v8QCgAAQBAJ&printsec=frontcover&dq=intitle:java&hl=&cd=9&source=gbs_api",
+          "infoLink": "https://play.google.com/store/books/details?id=4v8QCgAAQBAJ&source=gbs_api",
+          "canonicalVolumeLink": "https://play.google.com/store/books/details?id=4v8QCgAAQBAJ"
+        },
+        "saleInfo": {
+          "country": "AR",
+          "saleability": "FOR_SALE",
+          "isEbook": true,
+          "listPrice": {
+            "amount": 338.69,
+            "currencyCode": "ARS"
+          },
+          "retailPrice": {
+            "amount": 338.69,
+            "currencyCode": "ARS"
+          },
+          "buyLink": "https://play.google.com/store/books/details?id=4v8QCgAAQBAJ&rdid=book-4v8QCgAAQBAJ&rdot=1&source=gbs_api",
+          "offers": [
+            {
+              "finskyOfferType": 1,
+              "listPrice": {
+                "amountInMicros": 338690000,
+                "currencyCode": "ARS"
+              },
+              "retailPrice": {
+                "amountInMicros": 338690000,
+                "currencyCode": "ARS"
+              }
+            }
+          ]
+        },
+        "accessInfo": {
+          "country": "AR",
+          "viewability": "PARTIAL",
+          "embeddable": true,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false
+          },
+          "pdf": {
+            "isAvailable": true,
+            "acsTokenLink": "http://books.google.com.ar/books/download/Comenzando_a_programar_con_JAVA-sample-pdf.acsm?id=4v8QCgAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=4v8QCgAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "SAMPLE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "El presente libro reúne en un único documento todos los contenidos que se han considerado más relevantes para comenzar a programar con el lenguaje de programación Java, llegando a cubrir una buena parte de la edición estándar de Java ..."
+        }
+      },
+      {
+        "kind": "books#volume",
+        "id": "fGKyeZgvV4MC",
+        "etag": "dFFzBEFD/Bc",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/fGKyeZgvV4MC",
+        "volumeInfo": {
+          "title": "Programación orienta a objetos en Java",
+          "publisher": "Universidad del Norte",
+          "publishedDate": "2010",
+          "description": "Este texto esta dirigido a personas con conocimientos previos en programacion que emplean el paradigma procedimental para la codificacion de soluciones (especialmente usan lenguaje c) y que, ademas, deseen aprender acerca del desarrollo de aplicaciones orientadas a objetos en java, sin necesidad de leer la abundante y extensa literatura que, por lo general, contienen los manuales y guías de usuarios. Precisamente, la síntesis y la precisión de la información, es uno de los atractivos de este texto que compila en 300 paginas los contenidos básicos para un curso de programación orientada a objetos en java",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9789587410624"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "9587410629"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": true
+          },
+          "pageCount": 300,
+          "printType": "BOOK",
+          "categories": [
+            "Graphical user interfaces (Computer systems)"
+          ],
+          "averageRating": 4,
+          "ratingsCount": 1,
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "preview-1.0.0",
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=fGKyeZgvV4MC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=fGKyeZgvV4MC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          },
+          "language": "es",
+          "previewLink": "http://books.google.com.ar/books?id=fGKyeZgvV4MC&printsec=frontcover&dq=intitle:java&hl=&cd=10&source=gbs_api",
+          "infoLink": "http://books.google.com.ar/books?id=fGKyeZgvV4MC&dq=intitle:java&hl=&source=gbs_api",
+          "canonicalVolumeLink": "https://books.google.com/books/about/Programaci%C3%B3n_orienta_a_objetos_en_Java.html?hl=&id=fGKyeZgvV4MC"
+        },
+        "saleInfo": {
+          "country": "AR",
+          "saleability": "NOT_FOR_SALE",
+          "isEbook": false
+        },
+        "accessInfo": {
+          "country": "AR",
+          "viewability": "PARTIAL",
+          "embeddable": true,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false
+          },
+          "pdf": {
+            "isAvailable": false
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=fGKyeZgvV4MC&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "SAMPLE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "Este texto esta dirigido a personas con conocimientos previos en programacion que emplean el paradigma procedimental para la codificacion de soluciones (especialmente usan lenguaje c) y que, ademas, deseen aprender acerca del desarrollo de ..."
+        }
+      }
+    ]
+  }
