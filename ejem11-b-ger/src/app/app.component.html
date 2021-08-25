@@ -1,5 +1,10 @@
 <h1>Memory Books</h1>
 
-<input #title type="text"><button (click)="search(title.value); title.value=''">Buscar</button>
+<input #title type="text">
+<button (click)="searchGoogleApiBooks_httpClient(title.value); title.value=''">Buscar httClient</button>
+<button (click)="searchGoogleApiBooks_callBacks(title.value); title.value=''">Buscar callback</button>
+<button (click)="searchGoogleApiBooks_promise(); title.value=''">Buscar promise</button>
+<button (click)="searchGoogleApiBooks_observable(title.value); title.value=''">Buscar observable</button>
 
 <p *ngFor="let title of titles">{{title}}</p>
+<p *ngIf="mensajePromesa">El tema de promesas no fue explicado en el curso, au no implementado...</p>

@@ -1,3 +1,4 @@
+/*Ejem12 sobre OBSERVABLES*/
 import { Component } from '@angular/core';
 import { BooksService } from './books.service';
 

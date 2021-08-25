@@ -8,18 +8,31 @@ import { HttpClient } from '@angular/common/http'; //Cuidado aca que no te impor
 })
 export class AppComponent {
 
-titles: string[]= [];
+  titles: string[]= [];
 
-constructor(private httpClient: HttpClient){}
+  constructor(private httpClient: HttpClient){}
 
-searchBook(book: string){
-  //let url="https://www.googleapis.com/books/v1/volumes?q=intitle:"+book
-  let url="/books/v1/volumes?q=intitle:"+book
+  searchBook(book: string){
+    //let url="https://www.googleapis.com/books/v1/volumes?q=intitle:"+book
+    let url="/books/v1/volumes?q=intitle:"+book
+    //NOTA: Ahora la ruta es relativa porque tenemos el Proxy
+    
+
+    this.httpClient.get(url).subscribe(
+      response=>{
+        this.titles=[];
+        let books: any=response;
+        console.log("books.items.length: "+books.items.length+books);
+        for( let i=0; i< books.items.length; i++){
+          this.titles.push(books.items[i].volumeInfo.title);
+        }
+
+      },
+      error=>{console.log(error)}
+    );
+  }
   /*
-      NOTA: Ahora la ruta es relativa porque tenemos el Proxy:
-      
-      Diapositiva del PDF:
-      Contenido del archivo proxy.config.json dentro de la carpeta src:
+    Contenido del archivo proxy.config.json dentro de la carpeta src:
       {
           "/books/*": {
               "target": "https://www.googleapis.com/",
@@ -33,20 +46,6 @@ searchBook(book: string){
       $ ng serve --proxy-config proxy.conf.json
       
       Ruta relativa del codigo:
-      let url = "/books/v1/volumes?q=intitle:" + title;
+      let url = "/books/v1/volumes?q=intitle:" + title;  
   */
-
-  this.httpClient.get(url).subscribe(
-    response=>{
-      this.titles=[];
-      let books: any=response;
-      console.log("books.items.length: "+books.items.length+books);
-      for( let i=0; i< books.items.length; i++){
-        this.titles.push(books.items[i].volumeInfo.title);
-      }
-
-    },
-    error=>{console.log(error)}
-  );
-}
 }
