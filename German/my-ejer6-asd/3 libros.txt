@@ -1,0 +1,21 @@
+[
+    {
+        "title": "La insoportable Leventalidad del ser",
+        "description": "Los levental son una especia muy particular, acompañenos a descubrir que tan insoportable pueden ser",
+        "id": "4"
+    },
+    {
+        "title": "Colorados, estan entre nosotros",
+        "description": "Si un arbol cae en el medio del monte y no lo escucha nadie, excepto un colorado, igual hizo ruido? como se cepillan los dientes los colorados? Existe el reino magico de los colorados? son seres magicos y especiales?",
+        "id": "5"
+    },
+    {
+        "title": "Pela-papas de sprayet",
+        "description": "Un increible pelapapas y todas sus posibles aplicaciones en un solo libro",
+        "id": "6"
+    }
+]
+
+
+Como Leer un Libro
+En este libro le enseñaremos como leer un libro (si todavia no sabe como leer un libro, por favor, antes de leer este libro, aprenda a leer un libro, tenemos un libro especialmente para eso)..
