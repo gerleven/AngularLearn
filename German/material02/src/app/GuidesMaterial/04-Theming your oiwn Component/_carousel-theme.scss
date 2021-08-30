@@ -1,0 +1,86 @@
+// _carousel-theme.scss V2
+
+@use 'sass:map';
+@use '~@angular/material' as mat;
+
+@mixin color($theme) {
+  /*Step 2: Use values from the theme
+    Now that theme theme-based styles reside in mixins, we can extract the values we need from the theme passed into the mixins.
+  */
+  // Get the color config from the theme.
+  $color-config: mat.get-color-config($theme);
+
+  // Get the primary color palette from the color-config.
+  $primary-palette: map.get($color-config, 'primary');
+
+  .my-carousel-button {
+    // Read the 500 hue from the primary color palette.
+    color: mat.get-color-from-palette($primary-palette, 500);
+  }
+}
+
+@mixin typography($theme) {
+  // Get the typography config from the theme.
+  $typography-config: mat.get-typography-config($theme);
+
+  .my-carousel {
+    font-family: mat.font-family($typography-config);
+  }
+
+}
+/*
+Step 3: Add a theme mixin
+For convenience, we can add a theme mixin that includes both color and typography.
+This theme mixin should only emit the styles for each color and typography, respectively, if they have a config specified.
+*/
+@mixin theme($theme) {
+  $color-config: mat.get-color-config($theme);
+  @if $color-config != null {
+    @include color($theme);
+  }
+
+  $typography-config: mat.get-typography-config($theme);
+  @if $typography-config != null {
+    @include typography($theme);
+  }
+}
+/*
+Step 4: Include the theme mixin in your application
+Now that you've defined the carousel component's theme mixin, you can include this mixin along with the other theme mixins in your application:
+@use '~@angular/material' as mat;
+@use './path/to/carousel-theme' as carousel;
+
+@include mat.core();
+
+$my-primary: mat.define-palette(mat.$indigo-palette, 500);
+$my-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+$my-theme: mat.define-light-theme((
+ color: (
+   primary: $my-primary,
+   accent: $my-accent,
+ ),
+ typography: mat.define-typography-config(
+    $font-family: serif,
+  );
+));
+
+@include mat.all-component-themes($my-theme);
+@include carousel.theme($my-theme);       //    <-- Aca estamos incluyendo el thema del carrusel que fue construido en base a $my-theme
+*/
+
+//Version previa:
+/*
+// _carousel-theme.scss V1
+@mixin typography($theme) {
+  .my-carousel {
+    font-family: serif;
+  }
+}
+
+@mixin color($theme) {
+    .my-carousel-button {
+      color: blue;
+    }
+}
+*/
