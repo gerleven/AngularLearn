@@ -12,6 +12,7 @@ export class BooksService {
     let url = "https://www.googleapis.com/books/v1/volumes?q=intitle:" + title;
     return this.httpClient.get(url).pipe(     // Aca em vez de subscribirnos como haciamos antes con el httpClient ahora recibimos directamente el Observable del .get() y lo mandamos al pipe y map para manipularlo y trasformarlo al formato que queremos.
       map(response => this.extractTitles(response as any))
+      //en el ejem13 vemos tambien como manejar el error para dar un mensaje de mas alto nivel al componente
     );
   }
 
