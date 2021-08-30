@@ -1,0 +1,24 @@
+// carousel.scss V2 (cuando separamos en 2 archivos)
+
+.my-carousel {
+  display: flex;
+  //font-family: serif;
+}
+
+.my-carousel-button {
+  border-radius: 50%;
+  //color: blue;
+}
+
+/*
+// carousel.scss V1 (cuando estaba todo en un solo archivo)
+.my-carousel {
+  display: flex;
+  font-family: serif;
+}
+
+.my-carousel-button {
+  border-radius: 50%;
+  color: blue;
+}
+*/

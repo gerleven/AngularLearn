@@ -1,0 +1,60 @@
+@use '~@angular/material' as mat;
+
+@include mat.core();
+
+$my-primary: mat.define-palette(mat.$indigo-palette, 500);
+$my-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+$my-theme: mat.define-light-theme((
+ color: (
+   primary: $my-primary,
+   accent: $my-accent,
+ )//Aca no especifica ninguna typography, por lo tanto queda la default de core (Roboto)
+));
+
+@include mat.all-component-themes($my-theme);
+
+.kids-theme {   // Como esta todo dentro de .kids-theme{} solo quienes tengan esa clase tendran el $kids-theme
+        $kids-primary: mat.define-palette(mat.$cyan-palette);
+        $kids-accent: mat.define-palette(mat.$yellow-palette);
+        $kids-typography: mat.define-typography-config(
+            // Specify "Comic Sans" as the default font family for all levels.
+            $font-family: 'Comic Sans',
+        );
+
+        $kids-theme: mat.define-light-theme((
+        color: (
+            primary: $my-primary,
+            accent: $my-accent,
+        ),
+        typography: $kids-typography,
+        ));
+
+        @include mat.all-component-themes($kids-theme);
+}
+
+//Como aplicar un estilo de tipografia solo a un determinado componente:
+//The following example demonstrates applying typography styles only for the button component.
+$kids-typography: mat.define-typography-config(
+  // Specify "Comic Sans" as the default font family for all levels.
+  $font-family: 'Comic Sans',
+);
+
+// Now we have sweet buttons with Comic Sans.
+@include mat.button-typography($kids-typography);
+
+/*Using typography styles in your application*/
+//In addition to styles shared between components, the core mixin includes CSS classes for styling your application. These CSS classes correspond to the typography levels in your typography config. This mixin also emits styles for native header elements scoped within the .mat-typography CSS class
+
+
+/*Reading typography values from a config*/
+@use '~@angular/material' as mat;
+
+/*Use the default configuration.*/
+//You can read typography style values from a typography config via the following Sass functions. Each accepts a typography config and a level.
+//Additionally, you can use the typography-level Sass mixin to directly emit the CSS styles for a given typography level.
+$my-typography: mat.define-typography-config();
+
+.some-class-name {
+  @include mat.typography-level($my-typography, 'body-1');
+}
