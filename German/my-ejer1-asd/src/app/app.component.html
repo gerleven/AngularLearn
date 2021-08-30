@@ -1,0 +1,5 @@
+<input id="inputElement" type="text" [(ngModel)]=elemento name="ger">
+<button (click)="agregarElemento();">Agregar</button>
+<ul *ngIf="elementosArray.length>0">
+  <li *ngFor="let elem of elementosArray">{{elem}}</li>
+</ul>
