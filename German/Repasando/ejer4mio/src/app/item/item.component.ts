@@ -9,32 +9,27 @@ import { Item } from './Item';
 })
 export class ItemComponent implements OnInit {
 
+  constructor() { }
+
   ngOnInit(): void {
-    console.log("ngOnInIt!");
   }
+  
   @Input()
   itemHijo: Item;
 
 
   @Output()
-  emitterDelete = new EventEmitter<Item>(); //Aca en el <> es donde decime de que tipo seria el $event. Si puede ser cualquiera podemos poner "any".
-//Ojo aca al importar que no te importe el EventEmitter de Node si no el de Angular, se llaman igual pero son distintos.
+  emitterDelete = new EventEmitter<Item>();
   
-  @Output()
-  emitterCheck = new EventEmitter<Item>();
+  @Output() emitterCheck = new EventEmitter<Item>();
 
-
-  eliminarItem2(itemToDelete: Item){
-    this.emitterDelete.emit(itemToDelete);
-  }
-  
-  eliminarItem(){
+  deleteItem(){
     console.log("item que paso para eliminar: ",this.itemHijo);
     this.emitterDelete.emit(this.itemHijo);
   }
 
   checkItem(){
-    this.itemHijo.checked=!this.itemHijo.checked;
     this.emitterCheck.emit(this.itemHijo);
   }
+
 }

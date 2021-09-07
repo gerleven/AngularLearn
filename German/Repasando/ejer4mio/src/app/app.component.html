@@ -1,0 +1,11 @@
+<h1>A ChackList - Ejercicio 3</h1>
+<p>Separar los items del ejercicio 2 en componentes</p>
+<input type="text" #inputItem>
+    <button (click)="addItem(inputItem.value); inputItem.value=''; inputItem.focus();">Add</button>
+
+    <p *ngIf="listaItems.length==0">Sin items por ahora...</p>
+
+<div *ngFor="let itemPadreHoldedByngFor of listaItems">
+<app-item  [itemHijo]="itemPadreHoldedByngFor" (emitterDelete)="deleteItem($event)" (emitterCheck)="checkItem($event)"></app-item>
+<!-- remerber: $event must be event and not other like $item-->
+</div>
