@@ -70,6 +70,9 @@ export class AppComponent implements OnInit{
     }
   }
   
+  checkItem(){
+    
+  }
 
   test(){
     console.log("lista after: ",this.listaItems);
