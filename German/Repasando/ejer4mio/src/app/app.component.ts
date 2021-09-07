@@ -51,7 +51,7 @@ export class AppComponent implements OnInit{
   }
 
   
-  agregarItem(inputStringItem:string){
+  addItem(inputStringItem:string){
     if(inputStringItem==""){return}
     let itemNuevo:Item=
     {
@@ -62,7 +62,7 @@ export class AppComponent implements OnInit{
     console.log(`Agregando en el padre a ${itemNuevo.description}`);
   }
 
-  eliminarItem(i:Item){
+  deleteItem(i:Item){
     console.log(`borrando2 en el padre a ${i.description}`);
     let num = this.listaItems.indexOf(i);
     if(num!=-1){
@@ -71,7 +71,7 @@ export class AppComponent implements OnInit{
   }
   
   checkItem(){
-    
+
   }
 
   test(){

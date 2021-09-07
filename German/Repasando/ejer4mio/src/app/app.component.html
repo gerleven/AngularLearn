@@ -1,12 +1,12 @@
 <h1>A ChackList - Ejercicio 3</h1>
 <p>Separar los items del ejercicio 2 en componentes</p>
 <input type="text" #inputItem>
-    <button (click)="agregarItem(inputItem.value); inputItem.value=''; inputItem.focus();">Add</button>
+    <button (click)="addItem(inputItem.value); inputItem.value=''; inputItem.focus();">Add</button>
 
     <p *ngIf="listaItems.length==0">Sin items por ahora...</p>
 
 <div *ngFor="let itemPadreHoldedByngFor of listaItems">
-<app-item  [itemHijo]="itemPadreHoldedByngFor" (emitterDelete)="eliminarItem($event)"></app-item>
+<app-item  [itemHijo]="itemPadreHoldedByngFor" (emitterDelete)="deleteItem($item)" (emitterCheck)="checkItem($item)"></app-item>
 </div>
 
 <button (click)="test()">test lista after</button>
