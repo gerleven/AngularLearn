@@ -23,12 +23,13 @@ export class ItemComponent implements OnInit {
   
   @Output() emitterCheck = new EventEmitter<Item>();
 
-  eliminarItem(){
+  deleteItem(){
+    console.log("item que paso para eliminar: ",this.itemHijo);
     this.emitterDelete.emit(this.itemHijo);
   }
 
   checkItem(){
-    this.emitterDelete.emit(this.itemHijo);
+    this.emitterCheck.emit(this.itemHijo);
   }
 
 }

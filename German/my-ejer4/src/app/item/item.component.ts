@@ -29,6 +29,7 @@ export class ItemComponent implements OnInit {
   }
   
   eliminarItem(){
+    console.log("item que paso para eliminar: ",this.itemHijo);
     this.emitterDelete.emit(this.itemHijo);
   }
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Item } from './item/Item';
 import { HttpClient } from '@angular/common/http';
+import { identifierModuleUrl } from '@angular/compiler';
 const url ="http://127.0.0.1:8080/items/";
 
 
@@ -20,6 +21,7 @@ export class AppComponent implements OnInit{
   //NOTA: La listaItems es pasada al *ngFor, quien la recorre y por cada iteracion guarda/holdea el Item en itemPadreHoldedByngFor, esa variable es la que se bindea luego en el app-item como <app-item  [itemHijo]="itemPadreHoldedByngFor"...>
   
   private refresh(){
+    console.log("Actualizando Items");
     
     this.miHttpClient.get(url).subscribe(
       r=>{
@@ -52,26 +54,55 @@ export class AppComponent implements OnInit{
 
   
   addItem(inputStringItem:string){
+    console.log("Agregando item");
+    
     if(inputStringItem==""){return}
     let itemNuevo:Item=
     {
       description: inputStringItem,
       checked: false,
     }
-    this.listaItems.push(itemNuevo);
-    console.log(`Agregando en el padre a ${itemNuevo.description}`);
+    this.miHttpClient.post(url,itemNuevo).subscribe(
+      r=>{
+        this.refresh();
+        console.log("Item added");
+        
+      },
+      e=>{
+        this.miErrorHandleFunction(e);
+      }
+    );
   }
 
   deleteItem(i:Item){
-    console.log(`borrando2 en el padre a ${i.description}`);
-    let num = this.listaItems.indexOf(i);
-    if(num!=-1){
-      this.listaItems.splice(num,1);
-    }
+    console.log("Eliminando item: ",i);
+    
+    this.miHttpClient.delete(url+i.id).subscribe(
+      r=>{
+        this.refresh();
+        console.log("item deleted");
+        
+      },
+      e=>{
+        this.miErrorHandleFunction(e);
+      }
+    );
   }
   
-  checkItem(){
+  checkItem(i:Item){
+    console.log("Checkeando Item...");
+    let itemUpdated: Item = {id: i.id, description: i.description, checked: !i.checked };
 
+    this.miHttpClient.put(url+i.id,itemUpdated).subscribe(
+      r=>{
+        this.refresh();
+        console.log("item deleted");
+        
+      },
+      e=>{
+        this.miErrorHandleFunction(e);
+      }
+    );
   }
 
   test(){

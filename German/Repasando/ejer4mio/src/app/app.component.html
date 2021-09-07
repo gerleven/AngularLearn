@@ -6,7 +6,7 @@
     <p *ngIf="listaItems.length==0">Sin items por ahora...</p>
 
 <div *ngFor="let itemPadreHoldedByngFor of listaItems">
-<app-item  [itemHijo]="itemPadreHoldedByngFor" (emitterDelete)="deleteItem($item)" (emitterCheck)="checkItem($item)"></app-item>
+<app-item  [itemHijo]="itemPadreHoldedByngFor" (emitterDelete)="deleteItem($event)" (emitterCheck)="checkItem($event)"></app-item>
 </div>
 
 <button (click)="test()">test lista after</button>
