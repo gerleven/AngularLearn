@@ -25,15 +25,15 @@ export class ItemComponent implements OnInit {
   cbValue="false";
 
   eliminarItem2(itemAEliminar: Item){
-    console.log(`eliminarItem() recibio el item ${itemAEliminar.name} y le pasa ese item a .emit()`);
+    console.log(`eliminarItem() recibio el item ${itemAEliminar.description} y le pasa ese item a .emit()`);
     this.emitterDelete.emit(itemAEliminar);
-    console.log(`Emitiendo delete de ${this.itemHijo.name}`);
+    console.log(`Emitiendo delete de ${this.itemHijo.description}`);
   }
   
   eliminarItem(){
     console.log(`eliminarItem2() llama a .emit() con el this.itemHijo local`);
     this.emitterDelete.emit(this.itemHijo);
-    console.log(`Emitiendo delete de ${this.itemHijo.name}`);
+    console.log(`Emitiendo delete de ${this.itemHijo.description}`);
   }
 
   test(a){

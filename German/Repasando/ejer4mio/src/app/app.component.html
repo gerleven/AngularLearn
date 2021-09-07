@@ -9,3 +9,5 @@
 <!--<app-item  [itemHijo]="itemPadre" (emitterDelete)="eliminarItem(itemPadre)"></app-item>-->
 <app-item  [itemHijo]="itemPadreHoldedByngFor" (emitterDelete)="eliminarItem($event)"></app-item> <!--Aca $even es de tipo Item (porque asi lo estableci en el ) y contiene el item a ser eliminado por la handler del padre-->
 </div>
+
+<button (click)="test()">test lista after</button>

@@ -1,6 +1,6 @@
 <span class="itemCentrado">
-    <input type="checkbox" #cb [(ngModel)]="itemHijo.terminado" (click)="test(itemHijo);"/>
-    <span [class.tachado]="itemHijo.terminado">{{itemHijo.name}}</span> <!--Aca la clase tachado se activa o no en funcion de si el CB esta checked o no-->
+    <input type="checkbox" #cb [(ngModel)]="itemHijo.checked" (click)="test(itemHijo);"/>
+    <span [class.tachado]="itemHijo.checked">{{itemHijo.description}}</span> <!--Aca la clase tachado se activa o no en funcion de si el CB esta checked o no-->
     <button (click)="eliminarItem();">Delete</button>
     <!--<button (click)="eliminarItem(itemHijo);">Delete</button>-->
 </span>

@@ -1,4 +1,5 @@
 export interface Item{
-    name:string,
-    terminado: boolean
+    id?: number;
+    description:string;
+    checked: boolean;
 }
