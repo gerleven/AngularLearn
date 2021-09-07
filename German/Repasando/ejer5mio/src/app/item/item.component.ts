@@ -24,7 +24,6 @@ export class ItemComponent implements OnInit {
   @Output() emitterCheck = new EventEmitter<Item>();
 
   deleteItem(){
-    console.log("item que paso para eliminar: ",this.itemHijo);
     this.emitterDelete.emit(this.itemHijo);
   }
 
