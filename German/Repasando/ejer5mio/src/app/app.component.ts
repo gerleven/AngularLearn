@@ -16,9 +16,7 @@ export class AppComponent implements OnInit{
   constructor (private myItemService: ItemService){}
   
   
-  
-  listaItems: Item[] = []; //Array de Item, donde Item es la interface creada con "interface Item{name:string; terminado: boolean;}"
-  //NOTA: La listaItems es pasada al *ngFor, quien la recorre y por cada iteracion guarda/holdea el Item en itemPadreHoldedByngFor, esa variable es la que se bindea luego en el app-item como <app-item  [itemHijo]="itemPadreHoldedByngFor"...>
+  listaItems: Item[] = [];
   
   private refresh(){
     this.myItemService.getItems().subscribe(
