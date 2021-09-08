@@ -9,3 +9,10 @@
 <app-item  [itemHijo]="itemPadreHoldedByngFor" (emitterDelete)="deleteItem($event)" (emitterCheck)="checkItem($event)"></app-item>
 <!-- remerber: $event must be event and not other like $item-->
 </div>
+<br>
+<hr>
+<p>Pipe async:</p>
+<div *ngFor="let itemPadreHoldedByngFor of (listaItemsObservables | async)">
+    <app-item  [itemHijo]="itemPadreHoldedByngFor" (emitterDelete)="deleteItem($event)" (emitterCheck)="checkItem($event)"></app-item>
+    <!-- remerber: $event must be event and not other like $item-->
+    </div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Item } from './item/Item';
 import { identifierModuleUrl } from '@angular/compiler';
 import { ItemService } from './item.service';
+import { Observable } from 'rxjs';
 
 
 
@@ -17,8 +18,14 @@ export class AppComponent implements OnInit{
   
   
   listaItems: Item[] = [];
+
+  listaItemsObservables: Observable<Item[]>;
   
   private refresh(){
+    //Con observables y pipe async:
+    this.listaItemsObservables = this.myItemService.getItems();
+
+    //Sin observables y con subscribe
     this.myItemService.getItems().subscribe(
       items=> this.listaItems=items,
       e=>this.myErrorHandleFunction(e)
