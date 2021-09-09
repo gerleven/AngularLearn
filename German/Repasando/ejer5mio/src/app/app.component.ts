@@ -19,11 +19,11 @@ export class AppComponent implements OnInit{
   
   listaItems: Item[] = [];
 
-  listaItemsObservables: Observable<Item[]>;
+  $listaItemsObservables: Observable<Item[]>;
   
   private refresh(){
     //Con observables y pipe async:
-    this.listaItemsObservables = this.myItemService.getItems();
+    this.$listaItemsObservables = this.myItemService.getItems();
 
     //Sin observables y con subscribe
     this.myItemService.getItems().subscribe(

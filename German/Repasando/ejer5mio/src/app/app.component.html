@@ -1,5 +1,5 @@
-<h1>A ChackList - Ejercicio 3</h1>
-<p>Separar los items del ejercicio 2 en componentes</p>
+<h1>Ejercicio 5 - Servicios</h1>
+<p>Refactorizar el ejercicio 4 para que sea state less</p>
 <input type="text" #inputItem>
     <button (click)="addItem(inputItem.value); inputItem.value=''; inputItem.focus();">Add</button>
 
@@ -9,10 +9,55 @@
 <app-item  [itemHijo]="itemPadreHoldedByngFor" (emitterDelete)="deleteItem($event)" (emitterCheck)="checkItem($event)"></app-item>
 <!-- remerber: $event must be event and not other like $item-->
 </div>
+
 <br>
 <hr>
-<p>Pipe async:</p>
-<div *ngFor="let itemPadreHoldedByngFor of (listaItemsObservables | async)">
-    <app-item  [itemHijo]="itemPadreHoldedByngFor" (emitterDelete)="deleteItem($event)" (emitterCheck)="checkItem($event)"></app-item>
-    <!-- remerber: $event must be event and not other like $item-->
+<p>Sin Pipe async:</p>
+
+
+<div *ngIf="listaItems.length!=0; else loading">
+    <p>Items:</p>
+    <div *ngFor="let itemPadreHoldedByngFor of listaItems">
+        <app-item  [itemHijo]="itemPadreHoldedByngFor" (emitterDelete)="deleteItem($event)" (emitterCheck)="checkItem($event)"></app-item>
     </div>
+</div>
+
+<ng-template #loading>
+    <p>Aun sin Items...</p>
+</ng-template>
+
+<br>
+<hr>
+<p>Con Pipe async:</p>
+
+
+<h1>Duda: Como hago aca para darle una condicion al ngif y al mismo tiempo usar el | async y el as?</h1>
+<div *ngIf="$listaItemsObservables | async as itemsList; else loading"> <!-- Como hago aca para darle una condicion al ngif y al mismo tiempo usar el | async y el as?-->
+    <p>Items:</p>
+    <div *ngFor="let itemPadreHoldedByngFor of itemsList">
+        <app-item  [itemHijo]="itemPadreHoldedByngFor" (emitterDelete)="deleteItem($event)" (emitterCheck)="checkItem($event)"></app-item>
+    </div>
+</div>
+
+<ng-template #loading>
+    <p>Aun sin Items...</p>
+</ng-template>
+
+<br>
+<hr>
+<p>Probando:</p>
+
+
+<h1>Probando</h1>
+<div *ngIf="$listaItemsObservables | async as itemsList"> <!-- Como hago aca para darle una condicion al ngif y al mismo tiempo usar el | async y el as?-->
+    <div *ngIf="itemsList.length>0; else loading">
+        <p>Items:</p>
+        <div *ngFor="let itemPadreHoldedByngFor of itemsList">
+            <app-item  [itemHijo]="itemPadreHoldedByngFor" (emitterDelete)="deleteItem($event)" (emitterCheck)="checkItem($event)"></app-item>
+        </div>
+    </div>
+</div>
+
+<ng-template #loading>
+    <p>Aun sin Items...</p>
+</ng-template>
