@@ -12,7 +12,10 @@
 <br>
 <hr>
 <p>Pipe async:</p>
-<div *ngFor="let itemPadreHoldedByngFor of (listaItemsObservables | async)">
+<div *ngIf="listaItemsObservables">
+
+</div>
+<div *ngFor="let itemPadreHoldedByngFor of listaItemsObservables | async as lista">
     <app-item  [itemHijo]="itemPadreHoldedByngFor" (emitterDelete)="deleteItem($event)" (emitterCheck)="checkItem($event)"></app-item>
     <!-- remerber: $event must be event and not other like $item-->
-    </div>
+</div>
