@@ -20,8 +20,8 @@ export class BookDetailComponent {
   book: Book;
 
   constructor(private router: Router, activatedRoute: ActivatedRoute ,service: BookService) {
-    console.log("rescatando parametro: ",activatedRoute.snapshot.params['id']);
-    let id = activatedRoute.snapshot.params['id']; //Con esto rescatamos el parametro id que seria el numero que habia en la rul despues de book/ y que se guardo en "id" gracias al {path: 'book/:id'...} del app.routing.ts
+    console.log("lectura del parametro 'id' de la url: ",activatedRoute.snapshot.params['id']);
+    let id = Number.parseInt(activatedRoute.snapshot.params['id']); //Con esto rescatamos el parametro id que seria el numero que habia en la rul despues de book/ y que se guardo en "id" gracias al {path: 'book/:id'...} del app.routing.ts
     this.book = service.getBook(id); //ahora que sabemos el id del libro obtenido de la url lo usamos para pedir el libro al book.service
   }
 

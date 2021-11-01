@@ -1,12 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": false
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ejem0": {
+    "ejercicio6": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -16,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ejem0",
+            "outputPath": "dist/ejercicio6",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ejem0:build"
+            "browserTarget": "ejercicio6:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ejem0:build:production"
+              "browserTarget": "ejercicio6:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ejem0:build"
+            "browserTarget": "ejercicio6:build"
           }
         },
         "test": {
@@ -112,16 +109,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ejem0:serve"
+            "devServerTarget": "ejercicio6:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ejem0:serve:production"
+              "devServerTarget": "ejercicio6:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "ejem0"
+  "defaultProject": "ejercicio6"
 }

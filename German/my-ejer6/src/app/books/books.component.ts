@@ -17,7 +17,7 @@ import { Observable, throwError } from "rxjs";
     <button (click)="newBook();">New Book</button>
     <button (click)="test();">Test</button>
 `,
-  styleUrls: ['./books.component.css']
+  styleUrls: []
 })
 export class BooksComponent implements OnInit {
 

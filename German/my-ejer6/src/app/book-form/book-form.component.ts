@@ -23,7 +23,7 @@ export class BookFormComponent implements OnInit {
 
   book:Book;
   
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, private bookService: BookService) {
+  constructor(private router: Router, activatedRoute: ActivatedRoute, private bookService: BookService) {
     let id = activatedRoute.snapshot.params['id'];
     if(id){
       //Viene desde el EditBook

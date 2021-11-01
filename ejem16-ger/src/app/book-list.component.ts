@@ -18,6 +18,7 @@ export class BookListComponent {
 
 libroSagrado = 11;
   books: Book[];
+  
 
   constructor(service: BookService) {
     this.books = service.getBooks();

@@ -4,8 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <router-outlet></router-outlet><br>
-    😍<mat-slider min="1" max="100" step="1" value="loving" [(ngModel)]="loving"></mat-slider>
-    <input type="text" [(ngModel)]="loving">
+    
 
     <!--
 <h1>Ejercicio 6</h1>
@@ -23,9 +22,8 @@ import { Component } from '@angular/core';
 <br>
 -->
   `,
-  styleUrls: ['./app.component.css']
+  styleUrls: []
 })
 export class AppComponent {
-  title = 'my-ejer6';
-  loving: number=1;
+  
 }
