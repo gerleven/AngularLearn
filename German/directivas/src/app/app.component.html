@@ -1,0 +1,83 @@
+<h1>Ejercicio 1</h1>
+<input type="text" placeholder="Introducta un Item..."  [(ngModel)]="input"> <button (click)="addItem()">Agregar Item</button>
+<br>
+<button (click)="deleteLastItem()">Delete last Item</button>
+
+<div style="background-color: rgb(224, 191, 255);">
+  <h2>Directivas del IF</h2>
+  <h3>IF shorthand + THEN, ELSE</h3>
+  <div class="items" *ngIf= "items.length>0;  then haveItems else dontHaveItems">Esto sera ignorado</div>
+  <ng-template #haveItems> Tienes items </ng-template>
+  <ng-template #dontHaveItems> no tienes items </ng-template>
+
+  <h3>IF longhand + THEN, ELSE</h3>
+  <ng-template [ngIf]="items.length>0" [ngIfThen]="haveItems" [ngIfElse]="dontHaveItems"> Esto sera ignorado por tener then </ng-template>
+  <ng-template #haveItems> Tiene items !!</ng-template>
+  <ng-template #dontHaveItems> No tiene items !!</ng-template>
+
+  <h3>IF longhand + solo ELSE</h3>
+  <ng-template [ngIf]="items.length>0" [ngIfElse]="dontHaveItems"> Si falta el ngIfThen entonces este es el then</ng-template> <!-- [ngIfThen]="haveItems" -->
+  <ng-template #haveItems> Esto nunca sera usado</ng-template>
+  <ng-template #dontHaveItems> No tiene items !!</ng-template>
+</div>
+
+<div style="background-color: rgb(191, 255, 193);">
+  <h2>Directivas del SWITCH</h2>
+
+  <div [ngSwitch]="items.length" class="items" style="background-color: blanchedalmond;">
+    <span *ngSwitchCase="0">Agrega un Item</span>
+    <span *ngSwitchCase="1">Agrega un 2do item</span>
+    <span *ngSwitchDefault>Ya tienes suficientes Items...</span>
+  </div>
+</div>
+<br>
+
+<div style="background-color: rgb(191, 245, 255);">
+
+  <h2>Directivas del FOR</h2>
+  <h3> FOR shorthand</h3>
+  <div class="items" style="background-color: blanchedalmond;">
+    <ul>
+      <li *ngFor = "let item of items" >
+        {{item}}
+      </li>
+    </ul>
+  </div>
+
+  <h3> FOR shorthand + INDEX TRACK-BY FIRST </h3>
+  <div class="items" style="background-color: blanchedalmond;">
+    <ul>
+      <li *ngFor = "let item of items; index as i; trackBy: trackByFn; first as isFirst" >
+        {{i}} - {{item}} <span *ngIf="isFirst"> (**** First *****)</span>
+      </li>
+    </ul>
+  </div>
+
+  <h3> FOR longhand </h3>
+  <div class="items" style="background-color: blanchedalmond;">
+    <ul>
+      <ng-template ngFor let-item [ngForOf]="items">
+        <li>{{item}}</li>
+      </ng-template>
+    </ul>
+  </div>
+
+  <h3> FOR longhand + INDEX TRACK-BY</h3>
+  <div class="items" style="background-color: blanchedalmond;">
+    <ul>
+      <ng-template ngFor let-item [ngForOf]="items" let-i="index" [ngForTrackBy]="trackByFn">
+        <li>{{item}}</li>
+      </ng-template>
+    </ul>
+  </div>
+
+  <h3> FOR longhand + INDEX TRACK-BY FIRST</h3>
+  <div class="items" style="background-color: rgb(244, 255, 205);">
+  <ul>
+    <ng-template ngFor let-item [ngForOf]="items" let-i="index" [ngForTrackBy]="trackByFn" let-isFirst="first">
+    <li>{{i}} - {{item}}</li> <span *ngIf="isFirst"> (**** First *****)</span>
+    </ng-template>
+  </ul>
+
+  </div>
+</div>

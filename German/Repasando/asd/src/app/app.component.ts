@@ -4,6 +4,10 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  // template: `
+  // <h1>Probando3</h1>
+  // <p style="white-space: break-spaces;">{{consola}}</p>
+  // `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
@@ -12,6 +16,12 @@ export class AppComponent {
   
   private printConsola(i: string=""){
     this.consola = this.consola + i + "\n";
+  }
+
+  name: string  = "German";
+
+  setName(name:string){
+    this.name = name;
   }
 
 
