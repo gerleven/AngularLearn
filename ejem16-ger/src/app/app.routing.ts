@@ -6,7 +6,7 @@ import { BookDetailComponent } from './book-detail.component';
 
 const appRoutes = [
   { path: 'book/:id', component: BookDetailComponent,  },/*por lo que entendi hasta ahora aca va a machear toda url que tenga
-  el formato 'book/<algo>' guardando ese algo en el parametro id que despues vamos a rescatar usando el activatedRoute.snapshot.params['id'];*/
+  el formato 'book/<algo>' donde ese algo es tomado y guardando en el parametro "id" que despues vamos a leer usando el activatedRoute.snapshot.params['id'];*/
   { path: 'books', component: BookListComponent },
   { path: '', redirectTo: 'books', pathMatch: 'full' },
   { path: 'ger', redirectTo: 'book/11', pathMatch: 'full' }, //Si pongo la url http://localhost:4200/ger me redirige a 'book/11' osea 'book/:id' siendo id=11 osea http://localhost:4200/book/11
