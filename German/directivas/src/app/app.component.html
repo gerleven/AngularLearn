@@ -3,20 +3,43 @@
 <br>
 <button (click)="deleteLastItem()">Delete last Item</button>
 
+<div style="background-color: rgb(255, 191, 255);">
+  <h3>FOR & IF combinados</h3>
+
+  <ng-template [ngIf]="items.length==0" [ngIfThen]="emptyList" [ngIfElse]="itemsList"></ng-template>
+  <ng-template #emptyList> Add Items!</ng-template>
+
+  <!-- <ng-template #itemsList ngFor [ngForOf]="items" let-item let-indice="index" let-primero="first" > -->
+  <ng-template #itemsList>
+    <ng-template ngFor [ngForOf]="items" let-item let-indice="index" let-primero="first" >
+      <div>
+        <span *ngIf= "indice%2==0" style="background-color: rgb(179, 220, 255);"> {{indice+1}} - {{item}}</span>
+        <span *ngIf= "indice%2==1" style="background-color: aliceblue;">{{indice+1}} - {{item}}</span>
+
+        <ng-template [ngIf] = "primero" [ngIfThen]="theFirst" [ngIfElse]="notFirst" >(*Esto sera ignorado porque tenes un THEN*)</ng-template>
+        <ng-template #theFirst> (* Firts *)</ng-template>
+        <ng-template #notFirst> (~not firts~)</ng-template>
+      </div>
+    </ng-template>
+  </ng-template>
+  <br>
+  <b>Nota: </b> <i>{{nota()}}</i>
+</div>
+
 <div style="background-color: rgb(224, 191, 255);">
   <h2>Directivas del IF</h2>
   <h3>IF shorthand + THEN, ELSE</h3>
-  <div class="items" *ngIf= "items.length>0;  then haveItems else dontHaveItems">Esto sera ignorado</div>
+  <div class="items" *ngIf= "items.length>0;  then haveItems else dontHaveItems">Esto sera ignorado porque tenes un THEN</div>
   <ng-template #haveItems> Tienes items </ng-template>
   <ng-template #dontHaveItems> no tienes items </ng-template>
 
   <h3>IF longhand + THEN, ELSE</h3>
-  <ng-template [ngIf]="items.length>0" [ngIfThen]="haveItems" [ngIfElse]="dontHaveItems"> Esto sera ignorado por tener then </ng-template>
+  <ng-template [ngIf]="items.length>0" [ngIfThen]="haveItems" [ngIfElse]="dontHaveItems"> Esto sera ignorado porque tenes un THEN </ng-template>
   <ng-template #haveItems> Tiene items !!</ng-template>
   <ng-template #dontHaveItems> No tiene items !!</ng-template>
 
   <h3>IF longhand + solo ELSE</h3>
-  <ng-template [ngIf]="items.length>0" [ngIfElse]="dontHaveItems"> Si falta el ngIfThen entonces este es el then</ng-template> <!-- [ngIfThen]="haveItems" -->
+  <ng-template [ngIf]="items.length>0" [ngIfElse]="dontHaveItems"> Esto se muestra porque el ng if no tiene un THEN</ng-template> <!-- [ngIfThen]="haveItems" -->
   <ng-template #haveItems> Esto nunca sera usado</ng-template>
   <ng-template #dontHaveItems> No tiene items !!</ng-template>
 </div>
@@ -81,3 +104,6 @@
 
   </div>
 </div>
+
+<!-- <i> length: {{items.length}}  item: {{item}} - indice: {{indice}} primero: {{primero}} ---- items: {{items}}  --- item0: {{items[0]}}</i>
+<span>{{item}} {{test({items, item, indice, primero})}}</span> -->
