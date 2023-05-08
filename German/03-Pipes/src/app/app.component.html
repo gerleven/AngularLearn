@@ -1,0 +1,25 @@
+<div class="box">
+  <h2>Pipes</h2>
+  <p>Doc sobre los Pipes: <a href="https://angular.io/guide/pipes">https://angular.io/guide/pipes</a></p>
+  <p>Doc sobre los Pipes Names: <a href="https://angular.io/guide/styleguide#02-09">https://angular.io/guide/styleguide#02-09</a></p>
+  <p>Doc sobre los DatePipes options: <a href="https://angular.io/api/common/DatePipe#usage-notes">https://angular.io/api/common/DatePipe#usage-notes</a></p>
+</div>
+
+<p>Sin Pipe:</p>
+<p>Mi cumpleaños es hoy <b>{{fecha }}</b></p>
+<br>
+<p>Con Pipe:</p>
+<p>Mi cumpleaños es hoy <b>{{fecha | date}}</b></p>
+<p>Mi cumpleaños es hoy <b>{{fecha | date : 'short' | uppercase}}</b></p>
+<p>Mi cumpleaños es hoy <b>{{fecha | date : 'mediumDate' | uppercase}}</b></p>
+<p>Mi cumpleaños es hoy <b>{{fecha | date : 'fullDate' | uppercase}}</b></p>
+<button (click)="test()">Test</button>
+
+<style>
+  .box{
+    background-color: azure;
+    border-radius: 10px;
+    border: solid 1px black;
+    padding: 10px;
+  }
+</style>
