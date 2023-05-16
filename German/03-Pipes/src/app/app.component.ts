@@ -1,13 +1,20 @@
 import { Component } from '@angular/core';
 
+import { LowercasePipe } from './custom-pipes/lowercase.pipe';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   
+  constructor(private lowercasePipe: LowercasePipe){}
+
   fecha = Date.now();
+
+  valueCustomPipe = this.lowercasePipe.transform("Mostrar En Minusculas");
+
   codigo = `
   archivo lowercase.pipe.js:
   import { Pipe, PipeTransform } from '@angular/core';
@@ -23,9 +30,8 @@ export class AppComponent {
     }
   }`;
 
-
-  test(){
+  test() {
     console.log(this.fecha);
-    debugger    
+    debugger;
   }
 }
