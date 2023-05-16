@@ -13,7 +13,7 @@ export class AppComponent {
 
   fecha = Date.now();
 
-  valueCustomPipe = this.lowercasePipe.transform("Mostrar En Minusculas");
+  valueCustomPipe = this.lowercasePipe.transform("MOSTRAR En Minusculas y la primera con mayusculas", 'firstMayus', 'lastMayus');
 
   codigo = `
   archivo lowercase.pipe.js:
