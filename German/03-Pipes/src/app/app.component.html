@@ -4,6 +4,7 @@
   <p>Doc sobre los Pipes Names: <a href="https://angular.io/guide/styleguide#02-09">https://angular.io/guide/styleguide#02-09</a></p>
   <p>Doc sobre los DatePipes options: <a href="https://angular.io/api/common/DatePipe#usage-notes">https://angular.io/api/common/DatePipe#usage-notes</a></p>
 </div>
+<button (click)="test()">Test</button>
 
 <p>Sin Pipe:</p>
 <p>Mi cumpleaños es hoy <b>{{fecha }}</b></p>
@@ -16,14 +17,14 @@
 <pre>&lt;p&gt;Mi cumpleaños es hoy &lt; b &gt; &#123;&#123; fecha &#124; date : 'short' | uppercase &#125; &#125; &lt;/b&gt;&lt;/p&gt;</pre>
 <p>Mi cumpleaños es hoy <b>{{fecha | date : 'short' | uppercase}}</b></p>
 
-<br>
-<pre>&lt;p&gt;Mi cumpleaños es hoy &lt; b &gt; &#123;&#123; fecha &#124; date : 'mediumDate' | uppercase &#125; &#125; &lt;/b&gt;&lt;/p&gt;</pre>
-<p>Mi cumpleaños es hoy <b>{{fecha | date : 'mediumDate' | uppercase}}</b></p>
 
-<br>
-<pre>&lt;p&gt;Mi cumpleaños es hoy &lt; b &gt; &#123;&#123; fecha &#124; date : 'fullDate' | uppercase &#125; &#125; &lt;/b&gt;&lt;/p&gt;</pre>
-<p>Mi cumpleaños es hoy <b>{{fecha | date : 'fullDate' | uppercase}}</b></p>
-<button (click)="test()">Test</button>
+<h3>Custom Pipes:</h3>
+<pre class="box">
+ {{codigo}}
+</pre>
+<pre>&lt;p&gt;Mi cumpleaños es hoy &lt; b &gt; &#123;&#123; fecha &#124; date : 'fullDate' | uppercase <b style="background-color: yellow;">| MyLowercase </b> &#125; &#125; &lt;/b&gt;&lt;/p&gt;</pre>
+<p>Mi cumpleaños es hoy <b>{{fecha | date : 'fullDate' | uppercase | MyLowercase}}</b></p>
+
 
 <style>
   .box{
