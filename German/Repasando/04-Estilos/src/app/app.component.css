@@ -1,0 +1,55 @@
+span{
+    padding: 2px;
+    margin: 2px;
+}
+/* .myDivClass1{
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 1px rgb(255, 230, 0);
+}
+
+.myDivClass2{
+    font-weight: bold;
+    color: blueviolet;
+}
+
+.myDivClass3{
+    font-size: small;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: hsl(42, 68%, 74%);
+} */
+
+.bordeAzul{
+    border: solid 1px rgb(38, 0, 255);
+}
+
+.fondoAmarillo{
+    background-color: rgb(255, 255, 204);
+}
+
+.esquinasRedondas{
+    border-radius: 10px;
+}
+
+.textoVioleta{
+    color: blueviolet;   
+    color: #e47f7f;   
+}
+
+.textoNegrita{
+    font-weight: bold;
+}
+
+.letraChica{
+    font-size: smaller;
+}
+
+.letraGrande{
+    font-size: large;
+}
+
+
+p{
+    font-family: monospace;
+    font-weight: 800;
+}

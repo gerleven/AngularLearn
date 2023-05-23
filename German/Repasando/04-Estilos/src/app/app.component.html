@@ -1,0 +1,86 @@
+<h1>Estilos</h1>
+
+<style>
+  div {
+    padding: 10px;
+    margin: 5px;
+    border: solid 1px black;
+    /* border-radius: 5px; */
+  }
+</style>
+
+<div class="row">
+  <div class="col-3">
+    <div style="white-space: break-spaces; font-family: monospace"><p>Codigo JS</p>{{ codigo }}</div>
+    <div style="white-space: break-spaces; font-family: monospace"><p>Codigo Css</p>{{ codigoCss }}</div>
+    
+  </div>
+  <div class="col-8">
+    <div>
+      <span>Un Div sin class</span>
+    </div>
+
+    <br />
+    <p>[class] + nombre de la clase / variable con el nombre de la clase / funcion que retorna el nombre de la clase</p>
+
+    <div class="bordeAzul">
+      <span>class = bordeAzul. donde bordeAzul es una classe propia definida en mi .css</span>
+    </div>
+
+    <div [class]="variableConClase">
+      <span>[class] = variableConClase. Donde variableConClase = "fondoAmarillo"</span>
+    </div>
+
+    <div [class]="getMyClass()">
+      <span>[class] = getMyClass() donde getMyClass() retorna el string "textoVioleta"</span>
+    </div>
+    
+
+    <br />
+    <p>[ngClass] y un objeto map</p>
+    <div [ngClass]="myObjectMapClass">
+      <span>[ngClass] = myObjectMapClass = &#123; &lbrace; bordeAzul: true, fondoAmarillo: true, textoVioleta: false, etc {{ "}" }} &rbrace;</span>
+    </div>
+
+    <br />
+    <p>[ class.textoNegrita ]="true"</p>
+    <div [class.textoNegrita]="true" [class.letraGrande]="returnTrue()">
+      <span> {{"[class.textoNegrita]= 'true' [class.letraGrande]= 'returnTrue()'"}} </span>
+    </div>
+    
+    <!-- Styles -->
+    
+    <br />
+    <h4>Styles</h4>
+    <p>Hay 3 maneras equivlentes de escribir una misma propiedad de estilo</p>
+    <p>por ejemplo para 'backgraound color' podemos escribir: backgraound-color = backgraound-Color = backgraoundColor</p>
+    <span>Ejemplos:</span>
+    <span style="background-color: red;">style="background-color: red;"</span>
+    <span style="background-Color: aqua;">style="background-Color: aqua;"</span>
+    <span style="backgroundColor: yellow;">style="backgroundColor: yellow;"</span>
+    <span [style.background-color]= "'green'" >[style.background-color]= "'green'" </span>
+    <span [style.background-Color]= "'orange'" >[style.background-Color]= "'orange'" </span>
+    <span [style.backgroundColor]= "'pink'" >[style.backgroundColor]= "'pink'" </span>
+    
+    <br>
+    <br>
+    <p style="text-decoration: underline;"> {{"[style.property]='styleValue':"}} </p>
+    
+    <p [style.color] = variableConStyle> {{"&#60;p [style.color] = variableConStyle&#62; Text &#60;/p&#62;"}}</p>
+    <p [style.color] = "variableConStyle"> {{"&#60;p [style.color] = &ldquo; variableConStyle &rdquo; &#62; Text &#60;/p&#62;"}}</p>
+    <p [style.color] = "'green'">{{"&#60;p [style.color] = &ldquo; 'string' &rdquo;&#62; Text &#60;/p&#62;"}}</p>
+    <p [style.color] = "getMyStyle()">{{"&#60;p [style.color] = &ldquo;funcion()&rdquo;&#62; Text &#60;/p&#62;"}}</p>
+    <p [style.color] = getMyStyle()>{{"&#60;p [style.color] = funcion()&#62; Text &#60;/p&#62;"}}</p>
+
+    <br>
+    <p style="text-decoration: underline;"> {{"[ngStyle]='styleObject':"}} </p>
+    <p [ngStyle] = "myObjectMapStyle"> [ngStyle] = "myObjectMapStyle" = &lbrace;"color": "red", "font-size": "smaller" &rbrace; </p>
+    <p [ngStyle] = "getMyObjectMapStyle()"> [ngStyle] = "getMyObjectMapStyle()" = &lbrace;"color": "white", "font-size": "smaller", "backgraound-Color": variableConStyle ? blue : red  &rbrace; </p>
+
+    <br>
+    <p style="text-decoration: underline;"> cuando es una property con unidades: </p>
+    <p [style.fontSize.px]="25"> {{"&#60;p [style.fontSize.px] = &ldquo; 25 &rdquo;&#62; Text &#60;/p&#62;"}} </p>
+    <p [style.fontSize.%]="95"> {{"&#60;p [style.fontSize.%] = &ldquo; 95 &rdquo;&#62; Text &#60;/p&#62;"}} </p>
+    
+  </div>
+</div>
