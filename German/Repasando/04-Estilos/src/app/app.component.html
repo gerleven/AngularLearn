@@ -54,14 +54,18 @@
     <h4>Styles</h4>
     <p>Hay 3 maneras equivlentes de escribir una misma propiedad de estilo</p>
     <p>por ejemplo para 'backgraound color' podemos escribir: backgraound-color = backgraound-Color = backgraoundColor</p>
-    <span>Ejemplos:</span>
-    <span style="background-color: red;">style="background-color: red;"</span>
-    <span style="background-Color: aqua;">style="background-Color: aqua;"</span>
-    <span style="backgroundColor: yellow;">style="backgroundColor: yellow;"</span>
-    <span [style.background-color]= "'green'" >[style.background-color]= "'green'" </span>
-    <span [style.background-Color]= "'orange'" >[style.background-Color]= "'orange'" </span>
-    <span [style.backgroundColor]= "'pink'" >[style.backgroundColor]= "'pink'" </span>
-    
+    <style>#asd span{border-style: solid;}</style>
+    <div id="asd">
+      <p>Ejemplos:</p>
+      <span>span&lbrace;border-style: solid;&rbrace;</span><br><br>
+      <span style="border-color: red;">style="border-color: red;"</span>
+      <span style="border-Color: aqua;">style="border-Color: aqua;"</span>
+      <span style="borderColor: yellow;">style="borderColor: yellow;"</span>
+      <span [style.border-color]= "'green'" >[style.border-color]= "'green'" </span>
+      <span [style.border-Color]= "'orange'" >[style.border-Color]= "'orange'" </span>
+      <span [style.borderColor]= "'pink'" >[style.borderColor]= "'pink'" </span>
+    </div>
+
     <br>
     <br>
     <p style="text-decoration: underline;"> {{"[style.property]='styleValue':"}} </p>
