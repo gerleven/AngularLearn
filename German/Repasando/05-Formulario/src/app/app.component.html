@@ -1,0 +1,37 @@
+<h1>Formularios</h1>
+<h2>Formularios con Data Binding</h2>
+<p>1- Data binding: Vincular un control del formulario a un atributo del componente</p>
+<!-- input text -->
+<input type="text" [(ngModel)]="tuNombre" placeholder="Ingresa tu nombre">
+<p>Nombre Ingresado: {{tuNombre}}</p>
+<br>
+
+<!-- CheckBox -->
+<input type="checkbox" [(ngModel)]="isChecked"><span>CheckBox con binding bidireccional a la variable de componente isChecked</span>
+<p>isChecked: {{isChecked}}</p>
+
+
+<div *ngFor = "let item of items">
+  <input type="checkbox" [(ngModel)]="item.checked"/>{{item.label}}: {{item.checked?"Yes":"No"}}
+</div>
+
+<!-- Radio Buttons -->
+<br>
+<p>Elegi un personaje con los RB o escribiendo en el input:</p>
+<input type="text" [(ngModel)]="personajeElegido" placeholder="Ingresa tu personaje">
+<div><input type="radio" name="personaje" id="character" [(ngModel)]="personajeElegido" value="Batman">Batman</div>
+<div><input type="radio" name="personaje" id="character" [(ngModel)]="personajeElegido" value="Robin">Robin</div>
+<p>personajeElegido: {{personajeElegido}}</p>
+<br>
+
+
+
+
+
+<h2>Formularios con acceso a los controles desde el codigo</h2>
+<p>2- Acceso a los controles desde el código para leer y modificar su estado</p>
+
+
+<h2>Formularios con NgForm y FormGroup</h2>
+<a href="https://angular.io/guide/forms#build-a-template-driven-form">Docu oficial</a>
+<h2>Reactive Forms</h2>
