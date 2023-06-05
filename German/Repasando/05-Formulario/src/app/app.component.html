@@ -1,37 +1,55 @@
-<h1>Formularios</h1>
-<h2>Formularios con Data Binding</h2>
-<p>1- Data binding: Vincular un control del formulario a un atributo del componente</p>
-<!-- input text -->
-<input type="text" [(ngModel)]="tuNombre" placeholder="Ingresa tu nombre">
-<p>Nombre Ingresado: {{tuNombre}}</p>
-<br>
+<div class="row" style="padding: 20px;">
+  <div class="col-6">
+    <h1>Formularios</h1>
+    <h2>Formularios con Data Binding</h2>
+    <p>1- Data binding: Vincular un control del formulario a un atributo del componente</p>
+    <!-- input text -->
+    <input type="text" [(ngModel)]="tuNombre" placeholder="Ingresa tu nombre">
+    <p>Nombre Ingresado: {{tuNombre}}</p>
+    <br>
 
-<!-- CheckBox -->
-<input type="checkbox" [(ngModel)]="isChecked"><span>CheckBox con binding bidireccional a la variable de componente isChecked</span>
-<p>isChecked: {{isChecked}}</p>
+    <!-- CheckBox -->
+    <input type="checkbox" [(ngModel)]="isChecked"><span>CheckBox con binding bidireccional a la variable de componente isChecked</span>
+    <p>isChecked: {{isChecked}}</p>
 
 
-<div *ngFor = "let item of items">
-  <input type="checkbox" [(ngModel)]="item.checked"/>{{item.label}}: {{item.checked?"Yes":"No"}}
+    <div *ngFor = "let item of items">
+      <input type="checkbox" [(ngModel)]="item.checked"/>{{item.label}}: {{item.checked?"Yes":"No"}}
+    </div>
+
+    <!-- Radio Buttons -->
+    <br>
+    <p>Elegi un personaje con los RB o escribiendo en el input:</p>
+    <input type="text" [(ngModel)]="personajeElegido" placeholder="Ingresa tu personaje">
+    <div><input type="radio" name="personaje" id="character" [(ngModel)]="personajeElegido" value="Batman">Batman</div>
+    <div><input type="radio" name="personaje" id="character" [(ngModel)]="personajeElegido" value="Robin">Robin</div>
+    <p>personajeElegido: {{personajeElegido}}</p>
+    <br>
+  </div>
+  <div class="col-6">
+    <h2>Formularios con acceso a los controles desde el codigo</h2>
+    <p>2- Acceso a los controles desde el código mediante su "Template reference variable" para leer y modificar su estado
+      <br>Un elemento del template puede asociarse a una variable
+      <br>Podemos usar esa variable en el código del template para manejar ese elemento</p>
+
+    <input #inputRef type="text" placeholder="agregar un item">
+    <p>podemos usar el #ref del input dentro del codigo html para usar los metodos del API DOM de ese elemento html <br> Por ejemplo dentro del (click) del button para pasar el valor de inputRef.value a la funcion addItem() haciendo addItem(inputRef.value)</p>
+    <button (click)="addItem(inputRef.value); inputRef.value=''; inputRef.focus();">Add item</button>
+    <p>Si queremos renderizar el valor de inputRef.value asi &lbrace; &lbrace; inputRef.value &rbrace;&rbrace; vamos a ver que no se actualiza en tiempo real como el [(NgModel)] justamente porque no es un binding bidireccional : "{{inputRef.value}}"</p>
+    <div *ngFor = "let item of itemList">{{item}}</div>
+
+    <button (click)="updateTitle()">Update Title</button>
+    <p>Title: {{title}}</p>
+
+
+    <h2>Formularios con NgForm y FormGroup</h2>
+    <a href="https://angular.io/guide/forms#build-a-template-driven-form">Docu oficial</a>
+    <h2>Reactive Forms</h2>
+  </div>
+
 </div>
 
-<!-- Radio Buttons -->
-<br>
-<p>Elegi un personaje con los RB o escribiendo en el input:</p>
-<input type="text" [(ngModel)]="personajeElegido" placeholder="Ingresa tu personaje">
-<div><input type="radio" name="personaje" id="character" [(ngModel)]="personajeElegido" value="Batman">Batman</div>
-<div><input type="radio" name="personaje" id="character" [(ngModel)]="personajeElegido" value="Robin">Robin</div>
-<p>personajeElegido: {{personajeElegido}}</p>
-<br>
 
 
 
 
-
-<h2>Formularios con acceso a los controles desde el codigo</h2>
-<p>2- Acceso a los controles desde el código para leer y modificar su estado</p>
-
-
-<h2>Formularios con NgForm y FormGroup</h2>
-<a href="https://angular.io/guide/forms#build-a-template-driven-form">Docu oficial</a>
-<h2>Reactive Forms</h2>
