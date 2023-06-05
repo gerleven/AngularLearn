@@ -8,7 +8,7 @@
     <input id="mail" type="text" class="form-control" formControlName="email">
     
     <label for="password">User Password: </label>
-    <input id="password" type="password" class="form-control" formControlName="userPassword">
+    <input id="password" [type]="hidePassword?'password':''" class="form-control" formControlName="userPassword">
     <p *ngIf = "miFormulario.get('userPassword')?.touched && miFormulario.get('userPassword')?.errors?.['required']">Debe ingresar un password</p>
     <p *ngIf = "
     miFormulario.get('userPassword')?.touched
@@ -21,11 +21,17 @@
     
     <div class="col">
         <div class="row" style="gap: 10px;">
-            <button (click)= "verPassword()" type="button" class="btn btn-outline-secondary">Ver Password</button>
-            <button type="reset" class="btn btn-outline-secondary">Limpiar todo</button>
+            <button (click)= "loadUser()" type="button" class="btn btn-outline-secondary">Load User</button>
+            <button type="reset" class="btn btn-outline-secondary" >Limpiar todo</button>
+            <button (click)= "verPassword()" type="button" class="btn btn-outline-secondary" [disabled]="!miFormulario.get('userPassword')?.value">Ver Password</button>
             <button (click)= "test()" type="button" class="btn btn-outline-secondary">Test</button>
             <button type="submit" class="btn btn-success" [disabled]="!miFormulario.valid">Submit</button>
         </div>
     </div>
 </form>
+<p>miFormulario.value:</p>
 <p>{{miFormulario.value | json}}</p>
+<div *ngIf = "showNewUserSent" style="border: 1px rgb(9, 151, 68) solid; border-radius: 10px; padding: 20px; background-color: rgb(131, 255, 127);">
+    <p>User sent successfully!</p>
+    {{newUserSent | json}}
+</div>
