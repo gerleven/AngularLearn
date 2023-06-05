@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -38,14 +39,16 @@ export class AppComponent {
   // @ViewChild('inputRef') titleInput!: ElementRef<HTMLInputElement>;
   // @ViewChild('title') titleInput!: ElementRef;
   
-@ViewChild('inputRef') titleInput!: ElementRef;
+  @ViewChild('inputRef') titleInput!: ElementRef;
 
-updateTitle(){
-  this.title = this.titleInput.nativeElement.value;
-  this.titleInput.nativeElement.value = '';
-  this.titleInput.nativeElement.focus();
-}
+  updateTitle(){
+    this.title = this.titleInput.nativeElement.value;
+    this.titleInput.nativeElement.value = '';
+    this.titleInput.nativeElement.focus();
+  }
   
+  // <h2>Formularios con NgForm y FormGroup</h2>
+
 
 
 }
