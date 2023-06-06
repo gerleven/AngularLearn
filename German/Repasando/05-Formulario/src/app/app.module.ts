@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { DrivenFormComponent } from './driven-form/driven-form.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DrivenFormComponent
+    DrivenFormComponent,
+    ReactiveFormsComponent
   ],
   imports: [BrowserModule,AppRoutingModule,FormsModule, ReactiveFormsModule ],
   providers: [],

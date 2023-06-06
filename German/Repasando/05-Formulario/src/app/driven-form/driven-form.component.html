@@ -1,37 +1,38 @@
-<form [formGroup] = "miFormulario" (ngSubmit)="onSubmit()">
+<p>driven-form Works!</p>
+<form #myForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="userName" [(ngModel)]="userName" required #nameInput="ngModel">
+  
+      <div *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched)" class="error-message">
+        <div *ngIf="nameInput.errors?.['required']">Name is required.</div>
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" [(ngModel)]="email" required email #emailInput="ngModel">
+  
+      <div *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)" class="error-message">
+        <div *ngIf="emailInput.errors?.['required']">Email is required.</div>
+        <div *ngIf="emailInput.errors?.['email']">Invalid email format.</div>
+      </div>
+    </div>
 
-    <label for="name">User Name: </label>
-    <input id="name" type="text" class="form-control" formControlName="userName" placeholder="El User Name es opcional, pero debe tener entre 3 y 10 caracteres">
-    <p *ngIf = "validateName()">Debe ingresar al menos 3 caracteres</p>
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" [(ngModel)]="password" required minlength="8" #passwordInput="ngModel">
     
-    <label for="mail">Email: </label>
-    <input id="mail" type="text" class="form-control" formControlName="email">
-    
-    <label for="password">User Password: </label>
-    <input id="password" [type]="hidePassword?'password':''" class="form-control" formControlName="userPassword">
-    <p *ngIf = "miFormulario.get('userPassword')?.touched && miFormulario.get('userPassword')?.errors?.['required']">Debe ingresar un password</p>
-    <p *ngIf = "
-    miFormulario.get('userPassword')?.touched
-        && (
-            miFormulario.get('userPassword')?.errors?.['minlength'].actualLength
-            <
-            miFormulario.get('userPassword')?.errors?.['minlength'].requiredLength
-            )
-    ">El password debe tener al menos {{miFormulario.get('userPassword')?.errors?.['minlength'].requiredLength}} caracteres</p>
-    
-    <div class="col">
-        <div class="row" style="gap: 10px;">
-            <button (click)= "loadUser()" type="button" class="btn btn-outline-secondary">Load User</button>
-            <button type="reset" class="btn btn-outline-secondary" >Limpiar todo</button>
-            <button (click)= "verPassword()" type="button" class="btn btn-outline-secondary" [disabled]="!miFormulario.get('userPassword')?.value">Ver Password</button>
-            <button (click)= "test()" type="button" class="btn btn-outline-secondary">Test</button>
-            <button type="submit" class="btn btn-success" [disabled]="!miFormulario.valid">Submit</button>
+        <div *ngIf="passwordInput.invalid && (passwordInput.dirty || passwordInput.touched)" class="error-message">
+          <div *ngIf="passwordInput.errors?.['required']">Password is required.</div>
+          <div *ngIf="passwordInput.errors?.['minlength']">Password should have at least 8 characters.</div>
         </div>
     </div>
-</form>
-<p>miFormulario.value:</p>
-<p>{{miFormulario.value | json}}</p>
-<div *ngIf = "showNewUserSent" style="border: 1px rgb(9, 151, 68) solid; border-radius: 10px; padding: 20px; background-color: rgb(131, 255, 127);">
-    <p>User sent successfully!</p>
-    {{newUserSent | json}}
-</div>
+  
+    <button type="submit" [disabled]="myForm.invalid">Submit</button>
+
+    <div *ngIf = "showNewUserSent" style="border: 1px rgb(9, 151, 68) solid; border-radius: 10px; padding: 20px; background-color: rgb(131, 255, 127);">
+        <p>User sent successfully!</p>
+        {{newUser | json}}
+    </div>
+  </form>
