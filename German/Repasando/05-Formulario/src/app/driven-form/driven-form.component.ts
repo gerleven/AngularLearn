@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-driven-form',
@@ -12,9 +13,13 @@ export class DrivenFormComponent {
   showNewUserSent = false;
   newUser = {};
 
+  @ViewChild("myForm") miFormulario!: NgForm;
+
   public onSubmit(){
-    this.newUser = {userName: this.userName, email: this.email, password:this.password}
-    this.showNewUserSent = true
+    if(this.miFormulario.valid){
+      this.newUser = {userName: this.userName, email: this.email, password:this.password}
+      this.showNewUserSent = true
+    }
   }
 
 }
